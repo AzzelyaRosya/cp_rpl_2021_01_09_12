@@ -56,17 +56,17 @@ export default function Footer() {
           style={{
             display: 'flex',
             justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <Typography sx={{ color: '#fff', fontSize: 12 }}>
-            <PhoneIcon sx={{ fontSize: 14 }} />
-            (021) 23081805
-          </Typography>
+          <PhoneIcon sx={{ fontSize: 18, mr: 1, color: '#fff' }} />
+          <Typography sx={{ color: '#fff', fontSize: 12 }}>(021) 23081805</Typography>
         </Grid>
         <Grid
           item
           xs={12}
           md={12}
+          mb={-4}
           style={{
             display: 'flex',
             justifyContent: 'center',
