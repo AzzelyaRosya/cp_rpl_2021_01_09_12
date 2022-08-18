@@ -1,4 +1,5 @@
-import Footer from './pages/Footer/index';
+import Navbar from './components/Navbar/index';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         minHeight: '100vh',
       }}
     >
-      <nav>Navbar</nav>
+      <Navbar />
       <main>Main Content</main>
       <Footer />
     </div>

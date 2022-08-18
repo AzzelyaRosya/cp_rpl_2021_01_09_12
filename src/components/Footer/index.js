@@ -72,7 +72,7 @@ export default function Footer() {
             justifyContent: 'center',
           }}
         >
-          <Typography sx={{ color: '#fff', fontSize: 12 }}>&copy; Copyright 2022</Typography>
+          <Typography sx={{ color: '#CDD1DA', fontSize: 12 }}>&copy; Copyright 2022</Typography>
         </Grid>
       </Grid>
     </Box>
