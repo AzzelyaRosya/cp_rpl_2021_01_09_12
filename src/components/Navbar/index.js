@@ -1,26 +1,15 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import { Box, Typography, Grid, AppBar, Toolbar, IconButton, Menu, Button, MenuItem, Tooltip, Container } from '@mui/material';
 
 // icons
 import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 import GTranslateIcon from '@mui/icons-material/GTranslate';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = ['Homepage', 'About', 'Products'];
 const trans = ['Bahasa Indonesia', 'English'];
 
-const ResponsiveAppBar = () => {
+export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -94,6 +83,7 @@ const ResponsiveAppBar = () => {
                       textDecoration: 'none',
                       fontSize: 15,
                       justifyContent: 'flex-end',
+                      alignItems: 'right',
                     }}
                   >
                     {page}
@@ -120,9 +110,22 @@ const ResponsiveAppBar = () => {
           >
             Company Name
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'right' }}>
             {pages.map((page) => (
-              <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{
+                  mr: 2,
+                  display: { xs: 'none', md: 'flex' },
+                  fontWeight: 500,
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  fontSize: 13,
+                  justifyContent: 'flex-end',
+                  alignItems: 'right',
+                }}
+              >
                 {page}
               </Button>
             ))}
@@ -160,5 +163,4 @@ const ResponsiveAppBar = () => {
       </Container>
     </AppBar>
   );
-};
-export default ResponsiveAppBar;
+}
