@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar/index';
+import Products from './pages/Products/index';
 import Footer from './components/Footer/index';
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
       }}
     >
       <Navbar />
-      <main>Main Content</main>
+      <main>
+        <Products />
+      </main>
       <Footer />
     </div>
   );
