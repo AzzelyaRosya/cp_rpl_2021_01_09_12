@@ -61,37 +61,11 @@ export default function Footer() {
           style={{
             display: "flex",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <FacebookIcon sx={{ color: "#fff", fontSize: 30, pl: 10, pr: 10 }} />
-          <YouTubeIcon sx={{ color: "#fff", fontSize: 30, pr: 10 }} />
-          <InstagramIcon sx={{ color: "#fff", fontSize: 30, pr: 10 }} />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={12}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+          <PhoneIcon sx={{ fontSize: 18, mr: 1, color: "#fff" }} />
           <Typography sx={{ color: "#fff", fontSize: 12 }}>
-            Jl. Lenteng Agung (LA) Blok M No.18 <br /> Bekasi Pusat , Jawa Barat
-            Indonesia.
-          </Typography>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={12}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Typography sx={{ color: "#fff", fontSize: 12 }}>
-            <PhoneIcon sx={{ fontSize: 14 }} />
             (021) 23081805
           </Typography>
         </Grid>
@@ -99,12 +73,13 @@ export default function Footer() {
           item
           xs={12}
           md={12}
+          mb={-4}
           style={{
             display: "flex",
             justifyContent: "center",
           }}
         >
-          <Typography sx={{ color: "#fff", fontSize: 12 }}>
+          <Typography sx={{ color: "#CDD1DA", fontSize: 12 }}>
             &copy; Copyright 2022
           </Typography>
         </Grid>
