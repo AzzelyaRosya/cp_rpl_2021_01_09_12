@@ -28,13 +28,16 @@ import {
   subMenuMobile,
   subMenuTranslate,
 } from "./styles";
+import pages from "./data";
 // icons
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import MenuIcon from "@mui/icons-material/Menu";
 import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
-
+// Import React router
+import { Link } from "react-router-dom";
 // Data Menu
-const pages = ["Beranda", "Tentang", "Produk"];
+// const pages = ["Beranda", "Tentang", "Produk"];
+
 // Data SubMenu Translate
 const translate = ["Bahasa (INA)", "Inggris (ENG)"];
 // Company Name
@@ -79,13 +82,15 @@ const Navbar = () => {
           <Box sx={boxMenuDesktop}>
             {/* Sub Menu */}
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={subMenuDesktop}
-              >
-                {page}
-              </Button>
+              <Link to={page.route} style={{ textDecoration: "none" }}>
+                <Button
+                  key={page.id}
+                  onClick={handleCloseNavMenu}
+                  sx={subMenuDesktop}
+                >
+                  {page.nav}
+                </Button>
+              </Link>
             ))}
           </Box>
 
