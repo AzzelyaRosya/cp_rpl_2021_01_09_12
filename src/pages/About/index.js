@@ -11,6 +11,10 @@ import {
   Radio,
   Paper,
   Button,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
@@ -117,6 +121,7 @@ export default function index() {
           width: "100%",
           height: "100%",
           mr: 2,
+          mt: 8,
           textAlign: "right",
         }}
       />
@@ -186,50 +191,153 @@ export default function index() {
           </Grid>
         </Grid>
       </Box>
-
-      <Box sx={{ flexGrow: 1, mt: 4 }}>
-        <Grid container spacing={2} minHeight={250}>
-          <Grid xs display="flex" justifyContent="center" alignItems="center">
-            <Item>
-              <Avatar src={ava1} />
-            </Item>
+      <Box sx={{ flexGrow: 1, mt: 6, mb: 10 }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            "--Grid-borderWidth": "1px",
+            borderTop: "var(--Grid-borderWidth) solid",
+            borderLeft: "var(--Grid-borderWidth) solid",
+            borderColor: "divider",
+            "& > div": {
+              borderRight: "var(--Grid-borderWidth) solid",
+              borderBottom: "var(--Grid-borderWidth) solid",
+              borderColor: "divider",
+            },
+          }}
+        >
+          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
+            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
+              <CardContent>
+                <Typography
+                  sx={{ m: "auto" }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 42,
+                      md: 20,
+                      sm: 15,
+                      xs: 10,
+                    },
+                    fontWeight: 600,
+                    color: "#36476B",
+                  }}
+                >
+                  Ricky Karun
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid display="flex" justifyContent="center" alignItems="center">
-            <Item>
-              <Avatar src={ava2} />
-            </Item>
+          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
+            {" "}
+            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
+              <CardContent>
+                <Typography
+                  sx={{ m: "auto" }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 42,
+                      md: 20,
+                      sm: 15,
+                      xs: 10,
+                    },
+                    fontWeight: 600,
+                    color: "#36476B",
+                  }}
+                >
+                  Ricky Karun
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid xs display="flex" justifyContent="center" alignItems="center">
-            <Item>
-              <Avatar src={ava3} />
-            </Item>
+          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
+            {" "}
+            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
+              <CardContent>
+                <Typography
+                  sx={{ m: "auto" }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 42,
+                      md: 20,
+                      sm: 15,
+                      xs: 10,
+                    },
+                    fontWeight: 600,
+                    color: "#36476B",
+                  }}
+                >
+                  Ricky Karun
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-          <Grid xs display="flex" justifyContent="center" alignItems="center">
-            <Item>
-              <Avatar src={ava4} />
-            </Item>
+          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
+            {" "}
+            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
+              <CardContent>
+                <Typography
+                  sx={{ m: "auto" }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 42,
+                      md: 20,
+                      sm: 15,
+                      xs: 10,
+                    },
+                    fontWeight: 600,
+                    color: "#36476B",
+                  }}
+                >
+                  Ricky Karun
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Box>
 
       {/* TIMELINE */}
 
-      <Box sx={{ width: "100%", mt: 6, mb: 15 }}>
-        <Grid
-          container
-          rowSpacing={1}
-          justifyContent="center"
-          columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        >
-          <Grid item xs={6} justifyContent="center">
+      <Box sx={{ flexGrow: 1, mb: 20 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={4} sx={{ mt: 6 }}>
             <Typography
               sx={{
-                ml: 25,
+                ml: 5,
                 textAlign: "center",
                 fontSize: {
                   lg: 42,
-                  md: 20,
-                  sm: 15,
+                  md: 18,
+                  sm: 12,
                   xs: 10,
                 },
                 fontWeight: 600,
@@ -237,7 +345,7 @@ export default function index() {
               }}
               style={{
                 borderLeft: "7px #6D8CD0 solid",
-                height: 150,
+                height: 130,
               }}
             >
               <Typography
@@ -258,7 +366,7 @@ export default function index() {
                 <Grid item xs={6} md={4} sx={{ ml: -18 }}>
                   <Typography
                     sx={{
-                      mr: 18,
+                      ml: 37,
                       textAlign: "center",
                       fontSize: {
                         lg: 42,
@@ -276,7 +384,7 @@ export default function index() {
                 <Grid item xs={6} md={8}>
                   <Typography
                     sx={{
-                      mr: 20,
+                      ml: 20,
                       textAlign: "center",
                       fontSize: {
                         lg: 24,
@@ -294,15 +402,18 @@ export default function index() {
               </Typography>
             </Typography>
           </Grid>
-          <Grid item xs={6} sx={{ ml: -25 }}>
+          <Grid item xs={8}>
             <React.Fragment>
               <Timeline position="alternate">
                 <TimelineItem>
                   <TimelineOppositeContent color="text.secondary">
-                    <img
+                    <CardMedia
+                      component="img"
+                      width="100"
+                      height="150"
                       src={timeline1}
+                      alt="timeline1"
                       style={{
-                        width: "75%",
                         borderBottomLeftRadius: 10,
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
@@ -315,14 +426,19 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Eat</TimelineContent>
+                  <TimelineContent>
+                    Meeting with brand partners in Singapore.
+                  </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent color="text.secondary">
-                    <img
+                    <CardMedia
+                      component="img"
+                      width="100"
+                      height="150"
                       src={timeline2}
+                      alt="timeline2"
                       style={{
-                        width: "75%",
                         borderBottomLeftRadius: 10,
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
@@ -335,14 +451,19 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Code</TimelineContent>
+                  <TimelineContent>
+                    Celebrated our 7th Birthday.
+                  </TimelineContent>
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent color="text.secondary">
-                    <img
+                    <CardMedia
+                      component="img"
+                      width="100"
+                      height="150"
                       src={timeline3}
+                      alt="timeline3"
                       style={{
-                        width: "75%",
                         borderBottomLeftRadius: 10,
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
@@ -355,17 +476,7 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Sleep</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineOppositeContent color="text.secondary">
-                    9:00 am
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>Repeat</TimelineContent>
+                  <TimelineContent>Launched Our Products.</TimelineContent>
                 </TimelineItem>
               </Timeline>
             </React.Fragment>
