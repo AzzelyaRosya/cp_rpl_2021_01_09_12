@@ -28,7 +28,7 @@ import {
   subMenuMobile,
   subMenuTranslate,
 } from "./styles";
-import pages from "./data";
+// import pages from "./data";
 // icons
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -36,7 +36,23 @@ import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 // Import React router
 import { Link } from "react-router-dom";
 // Data Menu
-// const pages = ["Beranda", "Tentang", "Produk"];
+const pages = [
+  {
+    id: 1,
+    nav: "Beranda",
+    path: "/",
+  },
+  {
+    id: 2,
+    nav: "Tentang",
+    path: "/about",
+  },
+  {
+    id: 3,
+    nav: "Produk",
+    path: "/product",
+  },
+];
 
 // Data SubMenu Translate
 const translate = ["Bahasa (INA)", "Inggris (ENG)"];
@@ -81,16 +97,14 @@ const Navbar = () => {
           {/* Menu */}
           <Box sx={boxMenuDesktop}>
             {/* Sub Menu */}
-            {pages.map((page) => (
-              <Link to={page.route} style={{ textDecoration: "none" }}>
-                <Button
-                  key={page.id}
-                  onClick={handleCloseNavMenu}
-                  sx={subMenuDesktop}
-                >
-                  {page.nav}
-                </Button>
-              </Link>
+            {pages.map((data) => (
+              <Box key={data.id}>
+                <Link to={`${data.path}`} style={{ textDecoration: "none" }}>
+                  <Button onClick sx={subMenuDesktop}>
+                    {data.nav}
+                  </Button>
+                </Link>
+              </Box>
             ))}
           </Box>
 
@@ -124,9 +138,9 @@ const Navbar = () => {
               onClose={handleCloseNavMenu}
             >
               {/* Menu Items/Sub Menu */}
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={subMenuMobile}>{page}</Typography>
+              {pages.map((data) => (
+                <MenuItem key={data.id} onClick={handleCloseNavMenu}>
+                  <Typography sx={subMenuMobile}>{data.nav}</Typography>
                 </MenuItem>
               ))}
             </Menu>
