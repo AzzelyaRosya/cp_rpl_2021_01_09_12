@@ -1,52 +1,57 @@
-import * as React from 'react';
+import * as React from "react";
+
+// logo
+import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 
 // import icon
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import PhoneIcon from '@mui/icons-material/Phone';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PhoneIcon from "@mui/icons-material/Phone";
 
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid } from "@mui/material";
 
 export default function Footer() {
   return (
     <Box
       sx={{
-        width: '100%',
+        width: "100%",
         height: 200,
-        backgroundColor: '#36476B',
+        backgroundColor: "#36476B",
       }}
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
     >
-      <Grid container spacing={2} style={{ justifyContent: 'center', display: 'flex' }}>
+      <Grid
+        container
+        spacing={2}
+        style={{ justifyContent: "center", display: "flex" }}
+      >
         <Grid
           item
           xs={12}
           md={12}
           style={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          <FacebookIcon sx={{ color: '#fff', fontSize: 30, pl: 10, pr: 10 }} />
-          <YouTubeIcon sx={{ color: '#fff', fontSize: 30, pr: 10 }} />
-          <InstagramIcon sx={{ color: '#fff', fontSize: 30, pr: 10 }} />
+          <WifiTetheringIcon sx={{ fontSize: 12, color: "white" }} />
         </Grid>
         <Grid
           item
           xs={12}
           md={12}
           style={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          <Typography sx={{ color: '#fff', fontSize: 12 }}>
-            Jl. Lenteng Agung (LA) Blok M No.18 <br /> Bekasi Pusat , Jawa Barat Indonesia.
+          <Typography sx={{ fontSize: 12, color: "white" }}>
+            Company Name
           </Typography>
         </Grid>
         <Grid
@@ -54,13 +59,15 @@ export default function Footer() {
           xs={12}
           md={12}
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <PhoneIcon sx={{ fontSize: 18, mr: 1, color: '#fff' }} />
-          <Typography sx={{ color: '#fff', fontSize: 12 }}>(021) 23081805</Typography>
+          <PhoneIcon sx={{ fontSize: 18, mr: 1, color: "#fff" }} />
+          <Typography sx={{ color: "#fff", fontSize: 12 }}>
+            (021) 23081805
+          </Typography>
         </Grid>
         <Grid
           item
@@ -68,11 +75,13 @@ export default function Footer() {
           md={12}
           mb={-4}
           style={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          <Typography sx={{ color: '#CDD1DA', fontSize: 12 }}>&copy; Copyright 2022</Typography>
+          <Typography sx={{ color: "#CDD1DA", fontSize: 12 }}>
+            &copy; Copyright 2022
+          </Typography>
         </Grid>
       </Grid>
     </Box>

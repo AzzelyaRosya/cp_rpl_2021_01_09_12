@@ -1,6 +1,5 @@
-import Navbar from "./components/Navbar/index";
-import Home from "./pages/Homepages/index";
-import Footer from "./components/Footer/index";
+import Navbar from './components/Navbar/index';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
@@ -14,9 +13,8 @@ function App() {
       }}
     >
       <Navbar />
-      <Home />
-      {/* <main>Main Content</main> */}
-      {/* <Footer /> */}
+      <main>Main Content</main>
+      <Footer />
     </div>
   );
 }
