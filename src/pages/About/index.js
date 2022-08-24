@@ -46,6 +46,13 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
+});
+
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
   textTransform: "none",
@@ -104,7 +111,15 @@ export default function index() {
 
   return (
     <>
-      <img src={banner} style={{ width: "100%" }} />
+      <Img
+        src={banner}
+        sx={{
+          width: "100%",
+          height: "100%",
+          mr: 2,
+          textAlign: "right",
+        }}
+      />
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
@@ -243,6 +258,7 @@ export default function index() {
                 <Grid item xs={6} md={4} sx={{ ml: -18 }}>
                   <Typography
                     sx={{
+                      mr: 18,
                       textAlign: "center",
                       fontSize: {
                         lg: 42,
@@ -260,6 +276,7 @@ export default function index() {
                 <Grid item xs={6} md={8}>
                   <Typography
                     sx={{
+                      mr: 20,
                       textAlign: "center",
                       fontSize: {
                         lg: 24,
