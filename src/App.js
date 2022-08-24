@@ -1,5 +1,6 @@
-import Navbar from './components/Navbar/index';
-import Footer from './components/Footer/index';
+import Navbar from "./components/Navbar/index";
+import About from "./pages/About/index";
+import Footer from "./components/Footer/index";
 
 function App() {
   return (
@@ -9,11 +10,12 @@ function App() {
         flexDirection: "column",
         justifyContent: "space-between",
         minHeight: "100vh",
-        overflow: "auto",
       }}
     >
       <Navbar />
-      <main>Main Content</main>
+      <main>
+        <About />
+      </main>
       <Footer />
     </div>
   );

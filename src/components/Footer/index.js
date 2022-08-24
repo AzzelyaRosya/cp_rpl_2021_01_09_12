@@ -39,7 +39,7 @@ export default function Footer() {
             justifyContent: "center",
           }}
         >
-          <WifiTetheringIcon sx={{ fontSize: 12, color: "white" }} />
+          <WifiTetheringIcon sx={{ fontSize: 12, color: "white", mt: -5 }} />
         </Grid>
         <Grid
           item
@@ -50,7 +50,7 @@ export default function Footer() {
             justifyContent: "center",
           }}
         >
-          <Typography sx={{ fontSize: 12, color: "white" }}>
+          <Typography sx={{ fontSize: 12, color: "white", mt: -5 }}>
             Company Name
           </Typography>
         </Grid>
