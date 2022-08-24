@@ -1,22 +1,53 @@
-import * as React from 'react';
-import { Box, Typography, Grid, AppBar, Toolbar, IconButton, Menu, Button, MenuItem, Tooltip, Container } from '@mui/material';
-
+import * as React from "react";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+// Import Styles
+import {
+  appBar,
+  boxCompany,
+  boxMenuDesktop,
+  boxMenuMobile,
+  buttonTranslate,
+  companyNameDesktop,
+  companyNameMobile,
+  desktopBox,
+  logoDesktop,
+  logoMobile,
+  menuMobile,
+  menuTranslate,
+  subMenuDesktop,
+  subMenuMobile,
+  subMenuTranslate,
+} from "./styles";
 // icons
-import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
-import GTranslateIcon from '@mui/icons-material/GTranslate';
-import MenuIcon from '@mui/icons-material/Menu';
+import GTranslateIcon from "@mui/icons-material/GTranslate";
+import MenuIcon from "@mui/icons-material/Menu";
+import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 
-const pages = ['Homepage', 'About', 'Products'];
-const trans = ['Bahasa Indonesia', 'English'];
+// Data Menu
+const pages = ["Beranda", "Tentang", "Produk"];
+// Data SubMenu Translate
+const translate = ["Bahasa (INA)", "Inggris (ENG)"];
+// Company Name
+const companyName = ["Company Name"];
 
-export default function Navbar() {
+const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+  const handleOpenLanguageMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -24,137 +55,113 @@ export default function Navbar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseLanguageMenu = () => {
     setAnchorElUser(null);
   };
 
   return (
-    <AppBar position="static" sx={{ bgcolor: '#36476B' }}>
+    <AppBar sx={appBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <WifiTetheringIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-              fontSize: 15,
-            }}
-          >
-            Company Name
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'right' }}>
-            <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography
-                    sx={{
-                      mr: 2,
-                      display: { xs: 'none', md: 'flex' },
-                      fontWeight: 700,
-                      color: 'inherit',
-                      textDecoration: 'none',
-                      fontSize: 15,
-                      justifyContent: 'flex-end',
-                      alignItems: 'right',
-                    }}
-                  >
-                    {page}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          {/* Desktop Ver */}
+          {/* Company Identity*/}
+          <Box sx={desktopBox}>
+            <Box sx={boxCompany}>
+              {/* Logo */}
+              <WifiTetheringIcon sx={logoDesktop} />
+              {/* Company Name */}
+              <Typography variant="h6" noWrap sx={companyNameDesktop}>
+                {companyName}
+              </Typography>
+            </Box>
           </Box>
-          <WifiTetheringIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 700,
-              color: 'inherit',
-              textDecoration: 'none',
-              fontSize: 15,
-            }}
-          >
-            Company Name
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignItems: 'right' }}>
+          {/* Menu */}
+          <Box sx={boxMenuDesktop}>
+            {/* Sub Menu */}
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                  fontWeight: 500,
-                  color: 'inherit',
-                  textDecoration: 'none',
-                  fontSize: 13,
-                  justifyContent: 'flex-end',
-                  alignItems: 'right',
-                }}
+                sx={subMenuDesktop}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0, alignItems: 'right' }}>
-            <GTranslateIcon onClick={handleOpenUserMenu} sx={{ p: 0 }}></GTranslateIcon>
-
+          {/* Mobile Ver */}
+          <Box sx={boxMenuMobile}>
+            {/* Menu Icon */}
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+            >
+              <MenuIcon sx={{ color: "#fff" }} />
+            </IconButton>
+            {/* Menu */}
             <Menu
-              sx={{ mt: '45px' }}
               id="menu-appbar"
-              anchorEl={anchorElUser}
+              sx={menuMobile}
+              anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+            >
+              {/* Menu Items/Sub Menu */}
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography sx={subMenuMobile}>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+            {/* Company Identity */}
+            <Box flexGrow={1} sx={boxCompany}>
+              {/* Logo */}
+              <WifiTetheringIcon sx={logoMobile} />
+              {/* Company Name */}
+              <Typography variant="h5" noWrap sx={companyNameMobile}>
+                {companyName}
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Menu Translate */}
+          <Box>
+            {/* Icon */}
+            <IconButton onClick={handleOpenLanguageMenu} sx={buttonTranslate}>
+              <GTranslateIcon />
+            </IconButton>
+            <Menu
+              sx={menuTranslate}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={handleCloseLanguageMenu}
             >
-              {trans.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="right" alignItems={'right'}>
-                    {setting}
-                  </Typography>
+              {/* Sub Menu */}
+              {translate.map((language) => (
+                <MenuItem key={language} onClick={handleCloseLanguageMenu}>
+                  <Typography sx={subMenuTranslate}>{language}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -163,4 +170,5 @@ export default function Navbar() {
       </Container>
     </AppBar>
   );
-}
+};
+export default Navbar;
