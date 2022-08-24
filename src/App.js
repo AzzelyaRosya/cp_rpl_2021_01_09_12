@@ -1,20 +1,20 @@
-import Navbar from './components/Navbar/index';
-import Products from './pages/Products/index';
-import Footer from './components/Footer/index';
+import Navbar from "./components/Navbar/index";
+import About from "./pages/About/index";
+import Footer from "./components/Footer/index";
 
 function App() {
   return (
     <div
       style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        minHeight: '100vh',
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        minHeight: "100vh",
       }}
     >
       <Navbar />
       <main>
-        <Products />
+        <About />
       </main>
       <Footer />
     </div>
