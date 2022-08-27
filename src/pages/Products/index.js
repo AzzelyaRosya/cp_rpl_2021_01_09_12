@@ -36,7 +36,8 @@ import pd3 from '../../assets/img/pd3.jpg';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 // style
-import { borderRadiusImages, cardStyle, typoCardStyle, flexCard, flexGrid, radiusVideo } from './styles';
+import { borderRadiusImages, cardStyle, typoCardStyle, flexCard, flexGrid, radiusVideo, buttonHover } from './styles';
+import Colors from '../../theme/Color';
 
 export default function Products() {
   const [open1, setOpen1] = React.useState(false);
@@ -75,7 +76,7 @@ export default function Products() {
 
       <Box sx={{ align: 'center' }} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <Grid>
-          <Typography sx={{ color: '#36476B', fontWeight: 700, fontSize: 30, textAlign: 'center', mb: 3, mt: 3 }}>BEST PRODUCTS FOR YOU!</Typography>
+          <Typography sx={{ color: Colors.darkBlue, fontWeight: 700, fontSize: 30, textAlign: 'center', mb: 3, mt: 3 }}>BEST PRODUCTS FOR YOU!</Typography>
         </Grid>
 
         <Grid sx={{ display: 'flex', justifyContent: 'center', pb: 5 }}>
@@ -97,7 +98,7 @@ export default function Products() {
               </Typography>
             </CardContent>
             <CardActions sx={flexCard}>
-              <Button variant="contained" onClick={handleClickOpen1} sx={{ bgcolor: '#6D8CD0' }} style={borderRadiusImages}>
+              <Button variant="contained" onClick={handleClickOpen1} sx={buttonHover} style={borderRadiusImages}>
                 <ArrowRightAltIcon />
               </Button>
               <Dialog fullScreen={fullScreen} open={open1} onClose={handleClose1}>
@@ -127,7 +128,7 @@ export default function Products() {
               </Typography>
             </CardContent>
             <CardActions sx={flexCard}>
-              <Button variant="contained" onClick={handleClickOpen2} sx={{ bgcolor: '#6D8CD0' }} style={borderRadiusImages}>
+              <Button variant="contained" onClick={handleClickOpen2} sx={buttonHover} style={borderRadiusImages}>
                 <ArrowRightAltIcon />
               </Button>
               <Dialog fullScreen={fullScreen} open={open2} onClose={handleClose2}>
@@ -157,7 +158,7 @@ export default function Products() {
               </Typography>
             </CardContent>
             <CardActions sx={flexCard}>
-              <Button variant="contained" onClick={handleClickOpen3} sx={{ bgcolor: '#6D8CD0' }} style={borderRadiusImages}>
+              <Button variant="contained" onClick={handleClickOpen3} sx={buttonHover} style={borderRadiusImages}>
                 <ArrowRightAltIcon />
               </Button>
               <Dialog fullScreen={fullScreen} open={open3} onClose={handleClose3}>

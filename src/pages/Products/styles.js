@@ -1,4 +1,5 @@
 import { styled, makeStyles } from '@mui/styles';
+import Colors from '../../theme/Color';
 
 export default makeStyles((theme) => ({
   root: {
@@ -24,7 +25,7 @@ export const cardStyle = {
 };
 
 export const typoCardStyle = {
-  color: '#36476B',
+  color: Colors.darkBlue,
   fontWeight: 600,
   textAlign: 'center',
 };
@@ -37,6 +38,15 @@ export const flexCard = {
 export const flexGrid = {
   display: 'flex',
   justifyContent: 'center',
+};
+
+export const buttonHover = {
+  bgcolor: '#6D8CD0',
+  '&:hover': {
+    backgroundColor: Colors.darkBlue,
+    borderRadius: 8,
+    color: Colors.white,
+  },
 };
 
 export const radiusVideo = {
