@@ -3,18 +3,23 @@ const pages = [
   {
     id: 1,
     nav: "Beranda",
-    route: "/",
+    path: "/",
   },
   {
     id: 2,
     nav: "Tentang",
-    route: "/about",
+    path: "/about",
   },
   {
     id: 3,
-    nav: "About",
-    route: "/product",
+    nav: "Produk",
+    path: "/product",
   },
 ];
 
-export default pages;
+// Data SubMenu Translate
+const translate = ["Bahasa (INA)", "Inggris (ENG)"];
+// Company Name
+const companyName = ["Company Name"];
+
+export { pages, translate, companyName };

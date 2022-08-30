@@ -42,7 +42,7 @@ export default function index() {
   return (
     <>
       <CarouselBanner />
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: "#DAE3F8",
           height: "330px",
@@ -87,26 +87,35 @@ export default function index() {
             AMETLOREM IPSUM DOLOR SIT AMET
           </Typography>
         </Box>
-        <Box mt={4} sx={{ position: "absolute", right: 0 }}>
+        <Box mt={4} sx={{ right: 0 }}>
           <img src={vectorBanner} style={{ width: 460, height: 280 }} />
         </Box>
-      </Box>
-      <Box>
-        <Typography
-          sx={{
-            fontWeight: "700",
-            fontSize: 30,
-            color: "#36476B",
-            textAlign: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            textTransform: "uppercase",
-            mt: 3,
-            mb: 3,
-          }}
-        >
-          BEST SOLUTION FOR YOU!
-        </Typography>
+      </Box> */}{" "}
+      <Typography
+        sx={{
+          fontWeight: "700",
+          fontSize: {
+            xs: 21.7,
+            sm: 30,
+            md: 35,
+            lg: 35,
+          },
+          color: "#36476B",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent: "center",
+          textTransform: "uppercase",
+          mt: {
+            xs: 3,
+            sm: 4.5,
+            md: 3,
+          },
+          mb: 2,
+        }}
+      >
+        BEST SOLUTION FOR YOU!
+      </Typography>
+      <Container sx={{ justifyContent: "center", alignItems: "center" }}>
         {/* <Grid sx={{ justifyContent: "center", alignItems: "center" }}>
           <Grid item>
             <Card
@@ -127,50 +136,158 @@ export default function index() {
             </Card>
           </Grid>
         </Grid> */}
-        <Box
-          sx={{
-            maxWidth: 230,
-            height: 300,
-            backgroundColor: "#36476B",
-            borderRadius: 3,
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-            ml: 10,
-          }}
-          elevation={3}
+        <Grid
+          container
+          xs={12}
+          direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
+          rowSpacing={2}
+          // columnSpacing={1}
+          justifyContent="center"
+          alignItems="center"
         >
-          {/* Icon */}
-          <PersonRoundedIcon
-            sx={{ mt: 2, color: "#DAE3F8", width: 130, height: 130 }}
-          />
-          {/* Title */}
-          <Typography
-            sx={{
-              mt: -1,
-              mb: -0.5,
-              fontSize: 25,
-              color: "#DAE3F8",
-              fontWeight: 600,
-            }}
-          >
-            TITLE
-          </Typography>
-          <hr
-            style={{
-              width: 80,
-              border: 1.5,
-              borderColor: "#fff",
-              borderStyle: "solid",
-            }}
-          />
+          <Grid item xs>
+            <Box
+              sx={{
+                maxWidth: 230,
+                height: 300,
+                backgroundColor: "#36476B",
+                borderRadius: 3,
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+              elevation={3}
+            >
+              {/* Icon */}
+              <PersonRoundedIcon
+                sx={{ mt: 2, color: "#DAE3F8", width: 130, height: 130 }}
+              />
+              {/* Title */}
+              <Typography
+                sx={{
+                  mt: -1,
+                  mb: -0.5,
+                  fontSize: 25,
+                  color: "#DAE3F8",
+                  fontWeight: 600,
+                }}
+              >
+                TITLE
+              </Typography>
+              <hr
+                style={{
+                  width: 80,
+                  border: 1.5,
+                  borderColor: "#fff",
+                  borderStyle: "solid",
+                }}
+              />
 
-          {/* Description */}
-          <Typography sx={{ mt: 2, fontSize: 15, color: "#fff", pl: 2, pr: 2 }}>
-            Lorem ipsum dira sopspanare tad irar neledes sore: Irene Jonsson.
-          </Typography>
-        </Box>
-      </Box>
+              {/* Description */}
+              <Typography
+                sx={{ mt: 2, fontSize: 15, color: "#fff", pl: 2, pr: 2 }}
+              >
+                Lorem ipsum dira sopspanare tad irar neledes sore: Irene
+                Jonsson.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs>
+            <Box
+              sx={{
+                maxWidth: 230,
+                height: 300,
+                backgroundColor: "#36476B",
+                borderRadius: 3,
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+              elevation={3}
+            >
+              {/* Icon */}
+              <PersonRoundedIcon
+                sx={{ mt: 2, color: "#DAE3F8", width: 130, height: 130 }}
+              />
+              {/* Title */}
+              <Typography
+                sx={{
+                  mt: -1,
+                  mb: -0.5,
+                  fontSize: 25,
+                  color: "#DAE3F8",
+                  fontWeight: 600,
+                }}
+              >
+                TITLE
+              </Typography>
+              <hr
+                style={{
+                  width: 80,
+                  border: 1.5,
+                  borderColor: "#fff",
+                  borderStyle: "solid",
+                }}
+              />
+
+              {/* Description */}
+              <Typography
+                sx={{ mt: 2, fontSize: 15, color: "#fff", pl: 2, pr: 2 }}
+              >
+                Lorem ipsum dira sopspanare tad irar neledes sore: Irene
+                Jonsson.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs>
+            <Box
+              sx={{
+                maxWidth: 230,
+                height: 300,
+                backgroundColor: "#36476B",
+                borderRadius: 3,
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+              elevation={3}
+            >
+              {/* Icon */}
+              <PersonRoundedIcon
+                sx={{ mt: 2, color: "#DAE3F8", width: 130, height: 130 }}
+              />
+              {/* Title */}
+              <Typography
+                sx={{
+                  mt: -1,
+                  mb: -0.5,
+                  fontSize: 25,
+                  color: "#DAE3F8",
+                  fontWeight: 600,
+                }}
+              >
+                TITLE
+              </Typography>
+              <hr
+                style={{
+                  width: 80,
+                  border: 1.5,
+                  borderColor: "#fff",
+                  borderStyle: "solid",
+                }}
+              />
+
+              {/* Description */}
+              <Typography
+                sx={{ mt: 2, fontSize: 15, color: "#fff", pl: 2, pr: 2 }}
+              >
+                Lorem ipsum dira sopspanare tad irar neledes sore: Irene
+                Jonsson.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
       <Container maxWidth="xl"></Container>
     </>
   );
