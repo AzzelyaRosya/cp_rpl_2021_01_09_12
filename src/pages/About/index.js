@@ -39,66 +39,10 @@ import timeline2 from "../../assets/img/timeline2.jpg";
 import timeline3 from "../../assets/img/timeline3.jpg";
 
 // // import style
+
+import { BootstrapButton, Img } from "./Styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
-const Img = styled("img")({
-  margin: "auto",
-  display: "block",
-  maxWidth: "100%",
-  maxHeight: "100%",
-});
-
-const BootstrapButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
-  fontSize: {
-    lg: 16,
-    md: 12,
-    sm: 12,
-    xs: 10,
-  },
-  padding: "10px 20px",
-  border: "1px solid",
-  lineHeight: 1.5,
-  color: "#FFFFF",
-  backgroundColor: "#6D8CD0",
-  borderColor: "#6D8CD0",
-  borderRadius: 20,
-  fontFamily: [
-    "-apple-system",
-    "BlinkMacSystemFont",
-    '"Segoe UI"',
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
-  "&:hover": {
-    backgroundColor: "#eeeee",
-    borderColor: "#eeeee",
-    boxShadow: "none",
-  },
-  "&:active": {
-    boxShadow: "none",
-    backgroundColor: "#eeeee",
-    borderColor: "#eeeee",
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.5rem rgba(0,123,255,.5)",
-  },
-});
 
 export default function index() {
   // const classes = useStyles();
@@ -121,14 +65,19 @@ export default function index() {
           width: "100%",
           height: "100%",
           mr: 2,
-          mt: 8,
+          mt: "auto",
           textAlign: "right",
         }}
       />
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
-            <img src={vektor} style={{ width: "100%", ml: 10 }} />
+            <Img
+              src={vektor}
+              sx={{
+                width: "100%",
+              }}
+            />
           </Grid>
           <Grid item xs={6}>
             <Typography
@@ -208,93 +157,6 @@ export default function index() {
           }}
         >
           <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
-            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
-              <CardContent>
-                <Typography
-                  sx={{ m: "auto" }}
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontSize: {
-                      lg: 42,
-                      md: 20,
-                      sm: 15,
-                      xs: 10,
-                    },
-                    fontWeight: 600,
-                    color: "#36476B",
-                  }}
-                >
-                  Ricky Karun
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
-            {" "}
-            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
-              <CardContent>
-                <Typography
-                  sx={{ m: "auto" }}
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontSize: {
-                      lg: 42,
-                      md: 20,
-                      sm: 15,
-                      xs: 10,
-                    },
-                    fontWeight: 600,
-                    color: "#36476B",
-                  }}
-                >
-                  Ricky Karun
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
-            {" "}
-            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
-              <CardContent>
-                <Typography
-                  sx={{ m: "auto" }}
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontSize: {
-                      lg: 42,
-                      md: 20,
-                      sm: 15,
-                      xs: 10,
-                    },
-                    fontWeight: 600,
-                    color: "#36476B",
-                  }}
-                >
-                  Ricky Karun
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
-            {" "}
             <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
               <CardContent>
                 <Typography
