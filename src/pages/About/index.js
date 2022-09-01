@@ -37,7 +37,7 @@ import timeline2 from "../../assets/img/timeline2.jpg";
 import timeline3 from "../../assets/img/timeline3.jpg";
 
 // // import style
-import { BootstrapButton, Img, gridFlex, cardTeam } from "./Styles";
+import { BootstrapButton, Img, gridFirst, gridFlex, cardTeam } from "./Styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
 
@@ -126,70 +126,70 @@ export default function index() {
             </Typography>
           </Grid>
         </Grid>
-      </Box>
 
-      <Grid container spacing={2} pb={10} sx={gridFlex}>
-        {Data.map(({ person, name, position, exmp }) => (
-          <Grid item md={3.3} sm={12} xs={12} sx={gridFlex}>
-            <Card sx={cardTeam}>
-              <CardContent>
-                <Typography sx={{ m: "auto" }} gutterBottom>
-                  <Avatar
-                    src={person}
-                    sx={{ m: "auto", width: 100, height: 100 }}
-                  />
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontSize: {
-                      lg: 20,
-                      md: 15,
-                      sm: 15,
-                      xs: 10,
-                    },
-                    fontWeight: 600,
-                    color: "#36476B",
-                  }}
-                >
-                  {name}
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontSize: {
-                      lg: 12,
-                      md: 12,
-                      sm: 10,
-                      xs: 10,
-                    },
-                    fontWeight: 450,
-                    color: "#EEEEE",
-                  }}
-                >
-                  {position}
-                </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    mt: 4,
-                    fontSize: {
-                      lg: 15,
-                      md: 12,
-                      sm: 10,
-                      xs: 10,
-                    },
-                    fontWeight: 450,
-                    color: "#36476B",
-                  }}
-                >
-                  {exmp}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+        <Grid container spacing={2} pb={10} sx={gridFirst}>
+          {Data.map(({ person, name, position, exmp }) => (
+            <Grid item md={3.3} sm={12} xs={12} sx={gridFlex}>
+              <Card sx={cardTeam}>
+                <CardContent>
+                  <Typography sx={{ m: "auto" }} gutterBottom>
+                    <Avatar
+                      src={person}
+                      sx={{ m: "auto", width: 100, height: 100 }}
+                    />
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      fontSize: {
+                        lg: 20,
+                        md: 15,
+                        sm: 15,
+                        xs: 10,
+                      },
+                      fontWeight: 600,
+                      color: "#36476B",
+                    }}
+                  >
+                    {name}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      fontSize: {
+                        lg: 12,
+                        md: 12,
+                        sm: 10,
+                        xs: 10,
+                      },
+                      fontWeight: 450,
+                      color: "#EEEEE",
+                    }}
+                  >
+                    {position}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      mt: 4,
+                      fontSize: {
+                        lg: 15,
+                        md: 12,
+                        sm: 10,
+                        xs: 10,
+                      },
+                      fontWeight: 450,
+                      color: "#36476B",
+                    }}
+                  >
+                    {exmp}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
 
       {/* TIMELINE */}
 
