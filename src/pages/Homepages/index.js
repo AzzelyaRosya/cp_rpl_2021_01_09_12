@@ -90,7 +90,64 @@ export default function index() {
         <Box mt={4} sx={{ right: 0 }}>
           <img src={vectorBanner} style={{ width: 460, height: 280 }} />
         </Box>
-      </Box> */}{" "}
+      </Box> */}
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#DAE3F8",
+          height: "330px",
+          display: "flex",
+          borderBottomRightRadius: 20,
+          borderBottomLeftRadius: 20,
+          justifyContent: "center",
+        }}
+      >
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid item xs={12} lg={5}>
+            <img
+              src={vectorBanner}
+              sx={{
+                margin: "auto",
+                display: "block",
+              }}
+              style={{ width: "100%" }}
+            />
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <Typography
+              sx={{
+                fontSize: {
+                  lg: 52,
+                  md: 48,
+                  sm: 42,
+                  xs: 16,
+                },
+                fontWeight: 700,
+                color: "#36476B",
+                mt: 2,
+              }}
+            >
+              VISION <br /> AND PORPOSE
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: {
+                  lg: 16,
+                  md: 10,
+                  sm: 10,
+                  xs: 8,
+                },
+                fontWeight: 400,
+                color: "#36476B",
+              }}
+            >
+              LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM
+              DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
+              AMETLOREM IPSUM DOLOR SIT AMET
+            </Typography>
+          </Grid>
+        </Grid>
+      </Box>
       <Typography
         sx={{
           fontWeight: "700",

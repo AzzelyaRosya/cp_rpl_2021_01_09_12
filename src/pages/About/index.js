@@ -40,7 +40,7 @@ import timeline3 from "../../assets/img/timeline3.jpg";
 
 // // import style
 
-import { BootstrapButton, Img } from "./Styles";
+import { BootstrapButton, Img } from "./styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
 
