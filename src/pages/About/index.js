@@ -36,6 +36,11 @@ import timeline1 from "../../assets/img/timeline1.jpg";
 import timeline2 from "../../assets/img/timeline2.jpg";
 import timeline3 from "../../assets/img/timeline3.jpg";
 
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ListSubheader from "@mui/material/ListSubheader";
+import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
+
 // // import style
 import { BootstrapButton, Img, gridFirst, gridFlex, cardTeam } from "./Styles";
 // import useStyles from "./Styles";
@@ -55,7 +60,9 @@ export default function index() {
           mt: "auto",
           textAlign: "right",
         }}
+        style={{ objectFit: "cover" }}
       />
+
       <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
@@ -75,7 +82,7 @@ export default function index() {
                   sm: 42,
                   xs: 16,
                 },
-                fontWeight: 700,
+                fontWeight: 800,
                 color: "#36476B",
                 mt: 2,
               }}
@@ -85,18 +92,23 @@ export default function index() {
             <Typography
               sx={{
                 fontSize: {
-                  lg: 16,
+                  lg: 14,
                   md: 10,
                   sm: 10,
                   xs: 8,
                 },
-                fontWeight: 400,
+                fontWeight: 450,
                 color: "#36476B",
               }}
             >
-              LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM
-              DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
-              AMETLOREM IPSUM DOLOR SIT AMET
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
             <BootstrapButton variant="contained" disableRipple sx={{ mt: 2 }}>
               See All Products
@@ -106,7 +118,7 @@ export default function index() {
       </Box>
 
       {/* TEAM  */}
-      <Box sx={{ width: "100%", mt: 5 }}>
+      <Box sx={{ width: "100%", mt: 7 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12}>
             <Typography
@@ -132,7 +144,7 @@ export default function index() {
             <Grid item md={3.3} sm={12} xs={12} sx={gridFlex}>
               <Card sx={cardTeam}>
                 <CardContent>
-                  <Typography sx={{ m: "auto" }} gutterBottom>
+                  <Typography sx={{ m: "auto", mt: 2 }} gutterBottom>
                     <Avatar
                       src={person}
                       sx={{ m: "auto", width: 100, height: 100 }}
@@ -140,9 +152,10 @@ export default function index() {
                   </Typography>
                   <Typography
                     sx={{
+                      mt: 4,
                       textAlign: "center",
                       fontSize: {
-                        lg: 20,
+                        lg: 24,
                         md: 15,
                         sm: 15,
                         xs: 10,
@@ -157,13 +170,13 @@ export default function index() {
                     sx={{
                       textAlign: "center",
                       fontSize: {
-                        lg: 12,
+                        lg: 16,
                         md: 12,
                         sm: 10,
                         xs: 10,
                       },
-                      fontWeight: 450,
-                      color: "#EEEEE",
+                      fontWeight: 500,
+                      color: "#FFFF",
                     }}
                   >
                     {position}
@@ -172,8 +185,9 @@ export default function index() {
                     sx={{
                       textAlign: "center",
                       mt: 4,
+                      mb: 6,
                       fontSize: {
-                        lg: 15,
+                        lg: 14,
                         md: 12,
                         sm: 10,
                         xs: 10,
@@ -196,78 +210,82 @@ export default function index() {
       <Box sx={{ flexGrow: 1, mb: 20 }}>
         <Grid container spacing={2}>
           <Grid item xs={4} sx={{ mt: 6 }}>
-            <Typography
-              sx={{
-                ml: 5,
-                textAlign: "center",
-                fontSize: {
-                  lg: 42,
-                  md: 18,
-                  sm: 12,
-                  xs: 10,
-                },
-                fontWeight: 600,
-                color: "#36476B",
-              }}
-              style={{
-                borderLeft: "7px #6D8CD0 solid",
-                height: 120,
-              }}
-            >
+            <Box sx={{ flexGrow: 1, mt: 20 }}>
               <Typography
                 sx={{
-                  ml: -18,
+                  ml: 5,
                   textAlign: "center",
                   fontSize: {
                     lg: 42,
-                    md: 20,
-                    sm: 15,
+                    md: 18,
+                    sm: 12,
                     xs: 10,
                   },
                   fontWeight: 600,
                   color: "#36476B",
                 }}
+                style={{
+                  borderLeft: "7px #6D8CD0 solid",
+                  height: 120,
+                }}
               >
-                TIMELINE
-                <Grid item xs={6} md={4} sx={{ ml: -18 }}>
-                  <Typography
-                    sx={{
-                      ml: 37,
-                      textAlign: "center",
-                      fontSize: {
-                        lg: 42,
-                        md: 20,
-                        sm: 15,
-                        xs: 10,
-                      },
-                      fontWeight: 600,
-                      color: "#36476B",
-                    }}
-                  >
-                    OF
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} md={8}>
-                  <Typography
-                    sx={{
-                      mt: -8,
-                      ml: 27,
-                      textAlign: "center",
-                      fontSize: {
-                        lg: 15,
-                        md: 12,
-                        sm: 10,
-                        xs: 10,
-                      },
-                      fontWeight: 600,
-                      color: "#6D8CD0",
-                    }}
-                  >
-                    COMPANY'S HISTORY
-                  </Typography>
-                </Grid>
+                <Typography
+                  sx={{
+                    ml: -18,
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 42,
+                      md: 20,
+                      sm: 15,
+                      xs: 10,
+                    },
+                    fontWeight: 600,
+                    color: "#36476B",
+                  }}
+                >
+                  TIMELINE
+                  <Grid container spacing={2}>
+                    <Grid item xs={6} md={4} sx={{ ml: -18 }}>
+                      <Typography
+                        sx={{
+                          ml: 37,
+                          textAlign: "center",
+                          fontSize: {
+                            lg: 42,
+                            md: 20,
+                            sm: 15,
+                            xs: 10,
+                          },
+                          fontWeight: 600,
+                          color: "#36476B",
+                        }}
+                      >
+                        OF
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={4} md={2}>
+                      <Typography
+                        sx={{
+                          mt: 1,
+                          ml: 24,
+                          textAlign: "center",
+                          fontSize: {
+                            lg: 15,
+                            md: 12,
+                            sm: 10,
+                            xs: 10,
+                          },
+                          fontWeight: 600,
+                          color: "#6D8CD0",
+                        }}
+                      >
+                        COMPANY'S HISTORY
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Typography>
               </Typography>
-            </Typography>
+            </Box>
           </Grid>
           <Grid item xs={8}>
             {/* timeline 2 */}
@@ -298,7 +316,7 @@ export default function index() {
                     sx={{
                       textAlign: "center",
                       fontSize: {
-                        lg: 20,
+                        lg: 16,
                         md: 15,
                         sm: 15,
                         xs: 10,
@@ -335,7 +353,7 @@ export default function index() {
                     sx={{
                       textAlign: "center",
                       fontSize: {
-                        lg: 20,
+                        lg: 16,
                         md: 15,
                         sm: 15,
                         xs: 10,
@@ -372,7 +390,7 @@ export default function index() {
                     sx={{
                       textAlign: "center",
                       fontSize: {
-                        lg: 20,
+                        lg: 16,
                         md: 15,
                         sm: 15,
                         xs: 10,
