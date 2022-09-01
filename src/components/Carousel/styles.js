@@ -3,7 +3,7 @@ import Colors from "../../theme/Color";
 export const carouselBox = {
   maxWidth: "100%",
   mt: { xs: 7, sm: 8, md: 8, lg: 8 },
-  backgroundColor: "#DAE3F8",
+  backgroundColor: Colors.lightBlue,
 };
 
 export const imageBox = {
@@ -21,6 +21,7 @@ export const imageBox = {
 export const img = {
   objectFit: "cover",
   width: "100%",
+  height: "100%",
 };
 
 export const boxIcons = {

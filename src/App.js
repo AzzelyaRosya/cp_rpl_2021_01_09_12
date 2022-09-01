@@ -10,12 +10,12 @@ function App() {
   return (
     <Router>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          minHeight: "100vh",
-        }}
+      // style={{
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   justifyContent: "space-between",
+      //   minHeight: "100vh",
+      // }}
       >
         <Navbar />
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/product" component={Products} />
         </Switch>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

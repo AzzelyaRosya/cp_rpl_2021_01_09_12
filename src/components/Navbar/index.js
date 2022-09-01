@@ -28,40 +28,18 @@ import {
   subMenuMobile,
   subMenuTranslate,
 } from "./styles";
-// import pages from "./data";
+// Data
+import { pages, translate, companyName } from "./data";
 // icons
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import MenuIcon from "@mui/icons-material/Menu";
 import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 // Import React router
 import { Link } from "react-router-dom";
-// Data Menu
-const pages = [
-  {
-    id: 1,
-    nav: "Beranda",
-    path: "/",
-  },
-  {
-    id: 2,
-    nav: "Tentang",
-    path: "/about",
-  },
-  {
-    id: 3,
-    nav: "Produk",
-    path: "/product",
-  },
-];
-
-// Data SubMenu Translate
-const translate = ["Bahasa (INA)", "Inggris (ENG)"];
-// Company Name
-const companyName = ["Company Name"];
 
 const Navbar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState();
+  const [anchorElUser, setAnchorElUser] = React.useState();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -139,9 +117,13 @@ const Navbar = () => {
             >
               {/* Menu Items/Sub Menu */}
               {pages.map((data) => (
-                <MenuItem key={data.id} onClick={handleCloseNavMenu}>
-                  <Typography sx={subMenuMobile}>{data.nav}</Typography>
-                </MenuItem>
+                <Link to={`${data.path}`} style={{ textDecoration: "none" }}>
+                  <Box key={data.id}>
+                    <MenuItem onClick>
+                      <Typography sx={subMenuMobile}>{data.nav}</Typography>
+                    </MenuItem>
+                  </Box>
+                </Link>
               ))}
             </Menu>
             {/* Company Identity */}
