@@ -16,6 +16,8 @@ import {
   CardContent,
   CardActions,
 } from "@mui/material";
+// data mapping
+import { Data } from "./data";
 import { styled } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 // part of timeline
@@ -30,32 +32,17 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 // import img
 import banner from "../../assets/img/banneraboutus.png";
 import vektor from "../../assets/img/vektorabout.jpg";
-import ava1 from "../../assets/img/ava1.jpg";
-import ava2 from "../../assets/img/ava2.jpg";
-import ava3 from "../../assets/img/ava3.jpg";
-import ava4 from "../../assets/img/ava4.jpg";
 import timeline1 from "../../assets/img/timeline1.jpg";
 import timeline2 from "../../assets/img/timeline2.jpg";
 import timeline3 from "../../assets/img/timeline3.jpg";
 
 // // import style
-
-import { BootstrapButton, Img } from "./Styles";
+import { BootstrapButton, Img, gridFlex, cardTeam } from "./Styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
 
 export default function index() {
   // const classes = useStyles();
-
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    height: 140,
-    width: 100,
-    color: theme.palette.text.secondary,
-  }));
 
   return (
     <>
@@ -140,38 +127,24 @@ export default function index() {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ flexGrow: 1, mt: 6, mb: 10 }}>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            "--Grid-borderWidth": "1px",
-            borderTop: "var(--Grid-borderWidth) solid",
-            borderLeft: "var(--Grid-borderWidth) solid",
-            borderColor: "divider",
-            "& > div": {
-              borderRight: "var(--Grid-borderWidth) solid",
-              borderBottom: "var(--Grid-borderWidth) solid",
-              borderColor: "divider",
-            },
-          }}
-        >
-          <Grid {...{ xs: 12, sm: 6, md: 4, lg: 3 }} minHeight={160}>
-            <Card sx={{ minWidth: 275, color: "#6D8CD0" }}>
+
+      <Grid container spacing={2} pb={10} sx={gridFlex}>
+        {Data.map(({ person, name, position, exmp }) => (
+          <Grid item md={3.3} sm={12} xs={12} sx={gridFlex}>
+            <Card sx={cardTeam}>
               <CardContent>
-                <Typography
-                  sx={{ m: "auto" }}
-                  color="text.secondary"
-                  gutterBottom
-                >
-                  <Avatar src={ava1} sx={{ width: 100, height: 100 }} />
+                <Typography sx={{ m: "auto" }} gutterBottom>
+                  <Avatar
+                    src={person}
+                    sx={{ m: "auto", width: 100, height: 100 }}
+                  />
                 </Typography>
                 <Typography
                   sx={{
                     textAlign: "center",
                     fontSize: {
-                      lg: 42,
-                      md: 20,
+                      lg: 20,
+                      md: 15,
                       sm: 15,
                       xs: 10,
                     },
@@ -179,13 +152,44 @@ export default function index() {
                     color: "#36476B",
                   }}
                 >
-                  Ricky Karun
+                  {name}
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontSize: {
+                      lg: 12,
+                      md: 12,
+                      sm: 10,
+                      xs: 10,
+                    },
+                    fontWeight: 450,
+                    color: "#EEEEE",
+                  }}
+                >
+                  {position}
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    mt: 4,
+                    fontSize: {
+                      lg: 15,
+                      md: 12,
+                      sm: 10,
+                      xs: 10,
+                    },
+                    fontWeight: 450,
+                    color: "#36476B",
+                  }}
+                >
+                  {exmp}
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
-        </Grid>
-      </Box>
+        ))}
+      </Grid>
 
       {/* TIMELINE */}
 
@@ -207,7 +211,7 @@ export default function index() {
               }}
               style={{
                 borderLeft: "7px #6D8CD0 solid",
-                height: 130,
+                height: 120,
               }}
             >
               <Typography
@@ -246,12 +250,13 @@ export default function index() {
                 <Grid item xs={6} md={8}>
                   <Typography
                     sx={{
-                      ml: 20,
+                      mt: -8,
+                      ml: 27,
                       textAlign: "center",
                       fontSize: {
-                        lg: 24,
-                        md: 15,
-                        sm: 15,
+                        lg: 15,
+                        md: 12,
+                        sm: 10,
                         xs: 10,
                       },
                       fontWeight: 600,
@@ -265,13 +270,14 @@ export default function index() {
             </Typography>
           </Grid>
           <Grid item xs={8}>
+            {/* timeline 2 */}
             <React.Fragment>
               <Timeline position="alternate">
                 <TimelineItem>
                   <TimelineOppositeContent color="text.secondary">
                     <CardMedia
                       component="img"
-                      width="100"
+                      minWidth="100"
                       height="150"
                       src={timeline1}
                       alt="timeline1"
@@ -288,7 +294,19 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>
+                  <TimelineContent
+                    sx={{
+                      textAlign: "center",
+                      fontSize: {
+                        lg: 20,
+                        md: 15,
+                        sm: 15,
+                        xs: 10,
+                      },
+                      fontWeight: 400,
+                      color: "#36476B",
+                    }}
+                  >
                     Meeting with brand partners in Singapore.
                   </TimelineContent>
                 </TimelineItem>
@@ -313,7 +331,19 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>
+                  <TimelineContent
+                    sx={{
+                      textAlign: "center",
+                      fontSize: {
+                        lg: 20,
+                        md: 15,
+                        sm: 15,
+                        xs: 10,
+                      },
+                      fontWeight: 400,
+                      color: "#36476B",
+                    }}
+                  >
                     Celebrated our 7th Birthday.
                   </TimelineContent>
                 </TimelineItem>
@@ -338,7 +368,21 @@ export default function index() {
                     <TimelineDot />
                     <TimelineConnector />
                   </TimelineSeparator>
-                  <TimelineContent>Launched Our Products.</TimelineContent>
+                  <TimelineContent
+                    sx={{
+                      textAlign: "center",
+                      fontSize: {
+                        lg: 20,
+                        md: 15,
+                        sm: 15,
+                        xs: 10,
+                      },
+                      fontWeight: 400,
+                      color: "#36476B",
+                    }}
+                  >
+                    Launched Our Products.
+                  </TimelineContent>
                 </TimelineItem>
               </Timeline>
             </React.Fragment>
