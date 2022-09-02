@@ -1,10 +1,10 @@
-import React from "react";
-import Navbar from "./components/Navbar/index";
-import HomePages from "./pages/Homepages/index";
-import About from "./pages/About/index";
-import Products from "./pages/Products/index";
-import Footer from "./components/Footer/index";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import Navbar from './components/Navbar/index';
+import HomePages from './pages/Homepages/index';
+import About from './pages/About/index';
+import Products from './pages/Products/index';
+import Footer from './components/Footer/index';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/product" component={Products} />
         </Switch>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );

@@ -76,3 +76,24 @@ export const BootstrapButton = styled(Button)({
     boxShadow: "0 0 0 0.5rem rgba(0,123,255,.5)",
   },
 });
+
+export const gridFirst = {
+  display: "flex",
+  justifyContent: "center",
+  ml: -2,
+  mr: -2,
+};
+
+export const gridFlex = {
+  display: "flex",
+  justifyContent: "center",
+  ml: -2,
+  mr: -2,
+};
+
+export const cardTeam = {
+  maxWidth: 270,
+  minHeight: 320,
+  bgcolor: "#9AAFDF",
+  borederRadius: 20,
+};
