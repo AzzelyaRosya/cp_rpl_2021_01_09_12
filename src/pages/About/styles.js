@@ -87,13 +87,14 @@ export const gridFirst = {
 export const gridFlex = {
   display: "flex",
   justifyContent: "center",
+  mt: 5,
   ml: -2,
-  mr: -2,
+  mr: -5,
 };
 
 export const cardTeam = {
-  maxWidth: 270,
+  maxWidth: 250,
   minHeight: 320,
   bgcolor: "#9AAFDF",
-  borederRadius: 20,
+  borderRadius: 5,
 };
