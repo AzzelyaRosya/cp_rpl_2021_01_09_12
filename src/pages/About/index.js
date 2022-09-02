@@ -36,9 +36,13 @@ import timeline1 from "../../assets/img/timeline1.jpg";
 import timeline2 from "../../assets/img/timeline2.jpg";
 import timeline3 from "../../assets/img/timeline3.jpg";
 
-// // import style
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ListSubheader from "@mui/material/ListSubheader";
+import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
 
-import { BootstrapButton, Img } from "./Styles";
+// // import style
+import { BootstrapButton, Img, gridFirst, gridFlex, cardTeam } from "./styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
 

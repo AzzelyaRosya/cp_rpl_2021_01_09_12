@@ -15,32 +15,10 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-// Import Img
-import carouselBanner1 from "../../assets/img/carouselbanner1.png";
-import carouselBanner2 from "../../assets/img/carouselbanner2.jpg";
-import carouselBanner3 from "../../assets/img/carouselbanner3.jpg";
-import carouselBanner4 from "../../assets/img/carouselbanner4.jpg";
+// Import Data
+import { images } from "./data";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const images = [
-  {
-    label: "Slide 1",
-    imgPath: carouselBanner1,
-  },
-  {
-    label: "Slide 2",
-    imgPath: carouselBanner2,
-  },
-  {
-    label: "Slide 3",
-    imgPath: carouselBanner3,
-  },
-  {
-    label: "Slide 4",
-    imgPath: carouselBanner4,
-  },
-];
 
 function CarouselBanner() {
   const theme = useTheme();
