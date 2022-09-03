@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Button,
@@ -12,9 +11,9 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import ReactPlayer from "react-player";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import React from "react";
 
 // img and video
 import bannerproduct from "../../assets/img/bannerproduct.png";
@@ -27,16 +26,16 @@ import apaaja from "../../assets/video/contohvideo.mp4";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 // style
+import Colors from "../../theme/Color";
 import {
   borderRadiusImages,
+  buttonHover,
   cardStyle,
-  typoCardStyle,
   flexCard,
   flexGrid,
   radiusVideo,
-  buttonHover,
+  typoCardStyle,
 } from "./styles";
-import Colors from "../../theme/Color";
 
 export default function Products() {
   const [open1, setOpen1] = React.useState(false);

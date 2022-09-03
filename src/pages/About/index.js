@@ -1,35 +1,36 @@
-import React from 'react';
-import Avatar from '@mui/material/Avatar';
+import Avatar from "@mui/material/Avatar";
+import React from "react";
 // Import React router
-import { Link } from 'react-router-dom';
-import { Container, Box, Typography, Grid, FormLabel, FormControl, FormControlLabel, RadioGroup, Radio, Paper, Button, Card, CardMedia, CardContent, CardActions } from '@mui/material';
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 // data mapping
-import { Data } from './data';
-import { styled } from '@mui/material/styles';
+import { Data } from "./data";
 
 // part of timeline
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import Timeline from "@mui/lab/Timeline";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
 // import img
-import banner from '../../assets/img/banneraboutus.png';
-import vektor from '../../assets/img/vektorabout.jpg';
-import timeline1 from '../../assets/img/timeline1.jpg';
-import timeline2 from '../../assets/img/timeline2.jpg';
-import timeline3 from '../../assets/img/timeline3.jpg';
-
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import banner from "../../assets/img/banneraboutus.png";
+import timeline1 from "../../assets/img/timeline1.jpg";
+import timeline2 from "../../assets/img/timeline2.jpg";
+import timeline3 from "../../assets/img/timeline3.jpg";
+import vektor from "../../assets/img/vektorabout.jpg";
 
 // // import style
-import { BootstrapButton, Img, gridFirst, gridFlex, cardTeam } from './styles';
+import { BootstrapButton, cardTeam, gridFirst, gridFlex, Img } from "./styles";
 // import useStyles from "./Styles";
 // import {} from "./Styles";
 
@@ -41,22 +42,22 @@ export default function index() {
       <Img
         src={banner}
         sx={{
-          width: '100%',
-          height: '100%',
+          width: "100%",
+          height: "100%",
           mr: 2,
-          mt: 'auto',
-          textAlign: 'right',
+          mt: "auto",
+          textAlign: "right",
         }}
-        style={{ objectFit: 'cover' }}
+        style={{ objectFit: "cover" }}
       />
 
-      <Box sx={{ width: '100%' }}>
+      <Box sx={{ width: "100%" }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={6}>
             <Img
               src={vektor}
               sx={{
-                width: '100%',
+                width: "100%",
               }}
             />
           </Grid>
@@ -70,7 +71,7 @@ export default function index() {
                   xs: 16,
                 },
                 fontWeight: 800,
-                color: '#36476B',
+                color: "#36476B",
                 mt: 2,
               }}
             >
@@ -85,15 +86,25 @@ export default function index() {
                   xs: 10,
                 },
                 fontWeight: 450,
-                color: '#36476B',
+                color: "#36476B",
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-              et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
-            <Link to="/product" style={{ textDecoration: 'none' }}>
-              <BootstrapButton onClick variant="contained" disableRipple sx={{ mt: 2 }}>
+            <Link to="/product" style={{ textDecoration: "none" }}>
+              <BootstrapButton
+                onClick
+                variant="contained"
+                disableRipple
+                sx={{ mt: 2 }}
+              >
                 See All Products
               </BootstrapButton>
             </Link>
@@ -102,12 +113,12 @@ export default function index() {
       </Box>
 
       {/* TEAM  */}
-      <Box sx={{ width: '100%', mt: 7 }}>
+      <Box sx={{ width: "100%", mt: 7 }}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12}>
             <Typography
               sx={{
-                textAlign: 'center',
+                textAlign: "center",
 
                 fontSize: {
                   lg: 52,
@@ -116,7 +127,7 @@ export default function index() {
                   xs: 16,
                 },
                 fontWeight: 600,
-                color: '#36476B',
+                color: "#36476B",
               }}
             >
               LET'S MEET OUR TEAM
@@ -129,13 +140,16 @@ export default function index() {
             <Grid item md={3.3} sm={12} xs={12} sx={gridFlex}>
               <Card sx={cardTeam}>
                 <CardContent>
-                  <Typography sx={{ m: 'auto', mt: 2 }} gutterBottom>
-                    <Avatar src={person} sx={{ m: 'auto', width: 150, height: 150 }} />
+                  <Typography sx={{ m: "auto", mt: 2 }} gutterBottom>
+                    <Avatar
+                      src={person}
+                      sx={{ m: "auto", width: 150, height: 150 }}
+                    />
                   </Typography>
                   <Typography
                     sx={{
                       mt: 4,
-                      textAlign: 'center',
+                      textAlign: "center",
                       fontSize: {
                         lg: 24,
                         md: 20,
@@ -143,14 +157,14 @@ export default function index() {
                         xs: 20,
                       },
                       fontWeight: 600,
-                      color: '#36476B',
+                      color: "#36476B",
                     }}
                   >
                     {name}
                   </Typography>
                   <Typography
                     sx={{
-                      textAlign: 'center',
+                      textAlign: "center",
                       fontSize: {
                         lg: 16,
                         md: 14,
@@ -158,14 +172,14 @@ export default function index() {
                         xs: 14,
                       },
                       fontWeight: 500,
-                      color: '#FFFF',
+                      color: "#FFFF",
                     }}
                   >
                     {position}
                   </Typography>
                   <Typography
                     sx={{
-                      textAlign: 'center',
+                      textAlign: "center",
                       mt: 4,
                       mb: 6,
                       fontSize: {
@@ -175,7 +189,7 @@ export default function index() {
                         xs: 12,
                       },
                       fontWeight: 450,
-                      color: '#36476B',
+                      color: "#36476B",
                     }}
                   >
                     {exmp}
@@ -196,7 +210,7 @@ export default function index() {
               <Typography
                 sx={{
                   ml: 5,
-                  textAlign: 'center',
+                  textAlign: "center",
                   fontSize: {
                     lg: 42,
                     md: 32,
@@ -204,17 +218,17 @@ export default function index() {
                     xs: 10,
                   },
                   fontWeight: 600,
-                  color: '#36476B',
+                  color: "#36476B",
                 }}
                 style={{
-                  borderLeft: '7px #6D8CD0 solid',
+                  borderLeft: "7px #6D8CD0 solid",
                   height: 120,
                 }}
               >
                 <Typography
                   sx={{
                     ml: -18,
-                    textAlign: 'center',
+                    textAlign: "center",
                     fontSize: {
                       lg: 42,
                       md: 40,
@@ -222,7 +236,7 @@ export default function index() {
                       xs: 10,
                     },
                     fontWeight: 600,
-                    color: '#36476B',
+                    color: "#36476B",
                   }}
                 >
                   TIMELINE
@@ -231,7 +245,7 @@ export default function index() {
                       <Typography
                         sx={{
                           ml: 37,
-                          textAlign: 'center',
+                          textAlign: "center",
                           fontSize: {
                             lg: 42,
                             md: 40,
@@ -239,7 +253,7 @@ export default function index() {
                             xs: 10,
                           },
                           fontWeight: 600,
-                          color: '#36476B',
+                          color: "#36476B",
                         }}
                       >
                         OF
@@ -250,7 +264,7 @@ export default function index() {
                         sx={{
                           mt: 1,
                           ml: 24,
-                          textAlign: 'center',
+                          textAlign: "center",
                           fontSize: {
                             lg: 15,
                             md: 12,
@@ -258,7 +272,7 @@ export default function index() {
                             xs: 10,
                           },
                           fontWeight: 600,
-                          color: '#6D8CD0',
+                          color: "#6D8CD0",
                         }}
                       >
                         COMPANY'S HISTORY
@@ -286,7 +300,7 @@ export default function index() {
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
                         borderTopLeftRadius: 10,
-                        overflow: 'hidden',
+                        overflow: "hidden",
                       }}
                     />
                   </TimelineOppositeContent>
@@ -296,7 +310,7 @@ export default function index() {
                   </TimelineSeparator>
                   <TimelineContent
                     sx={{
-                      textAlign: 'center',
+                      textAlign: "center",
                       fontSize: {
                         lg: 16,
                         md: 15,
@@ -304,7 +318,7 @@ export default function index() {
                         xs: 10,
                       },
                       fontWeight: 400,
-                      color: '#36476B',
+                      color: "#36476B",
                     }}
                   >
                     Meeting with brand partners in Singapore.
@@ -323,7 +337,7 @@ export default function index() {
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
                         borderTopLeftRadius: 10,
-                        overflow: 'hidden',
+                        overflow: "hidden",
                       }}
                     />
                   </TimelineOppositeContent>
@@ -333,7 +347,7 @@ export default function index() {
                   </TimelineSeparator>
                   <TimelineContent
                     sx={{
-                      textAlign: 'center',
+                      textAlign: "center",
                       fontSize: {
                         lg: 16,
                         md: 15,
@@ -341,7 +355,7 @@ export default function index() {
                         xs: 10,
                       },
                       fontWeight: 400,
-                      color: '#36476B',
+                      color: "#36476B",
                     }}
                   >
                     Celebrated our 7th Birthday.
@@ -360,7 +374,7 @@ export default function index() {
                         borderBottomRightRadius: 10,
                         borderTopRightRadius: 10,
                         borderTopLeftRadius: 10,
-                        overflow: 'hidden',
+                        overflow: "hidden",
                       }}
                     />
                   </TimelineOppositeContent>
@@ -370,7 +384,7 @@ export default function index() {
                   </TimelineSeparator>
                   <TimelineContent
                     sx={{
-                      textAlign: 'center',
+                      textAlign: "center",
                       fontSize: {
                         lg: 16,
                         md: 15,
@@ -378,7 +392,7 @@ export default function index() {
                         xs: 10,
                       },
                       fontWeight: 400,
-                      color: '#36476B',
+                      color: "#36476B",
                     }}
                   >
                     Launched Our Products.
