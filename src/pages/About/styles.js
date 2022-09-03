@@ -1,6 +1,6 @@
-import { makeStyles } from "@mui/styles";
-import { styled } from "@mui/material/styles";
-import { Button } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
+import { Button } from '@mui/material';
 
 // export default makeStyles((theme) => ({
 //   root: {
@@ -27,74 +27,63 @@ import { Button } from "@mui/material";
 //   },
 // }));
 
-export const Img = styled("img")({
-  margin: "auto",
-  display: "block",
-  maxWidth: "100%",
-  maxHeight: "100%",
+export const Img = styled('img')({
+  margin: 'auto',
+  display: 'block',
+  maxWidth: '100%',
+  maxHeight: '100%',
 });
 
 export const BootstrapButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
+  boxShadow: 'none',
+  textTransform: 'none',
   fontSize: {
     lg: 16,
     md: 12,
     sm: 12,
     xs: 10,
   },
-  padding: "10px 20px",
-  border: "1px solid",
+  padding: '10px 20px',
+  border: '1px solid',
   lineHeight: 1.5,
-  color: "#FFFFF",
-  backgroundColor: "#6D8CD0",
-  borderColor: "#6D8CD0",
+  color: '#FFFFF',
+  backgroundColor: '#6D8CD0',
+  borderColor: '#6D8CD0',
   borderRadius: 20,
-  fontFamily: [
-    "-apple-system",
-    "BlinkMacSystemFont",
-    '"Segoe UI"',
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
-  "&:hover": {
-    backgroundColor: "#eeeee",
-    borderColor: "#eeeee",
-    boxShadow: "none",
+  fontFamily: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'].join(','),
+  '&:hover': {
+    backgroundColor: '#eeeee',
+    borderColor: '#eeeee',
+    boxShadow: 'none',
   },
-  "&:active": {
-    boxShadow: "none",
-    backgroundColor: "#eeeee",
-    borderColor: "#eeeee",
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#eeeee',
+    borderColor: '#eeeee',
   },
-  "&:focus": {
-    boxShadow: "0 0 0 0.5rem rgba(0,123,255,.5)",
+  '&:focus': {
+    boxShadow: '0 0 0 0.5rem rgba(0,123,255,.5)',
   },
 });
 
 export const gridFirst = {
-  display: "flex",
-  justifyContent: "center",
+  display: 'flex',
+  justifyContent: 'center',
   ml: -2,
   mr: -2,
 };
 
 export const gridFlex = {
-  display: "flex",
-  justifyContent: "center",
+  display: 'flex',
+  justifyContent: 'center',
   mt: 5,
   ml: -2,
   mr: -5,
 };
 
 export const cardTeam = {
-  maxWidth: 250,
+  maxWidth: 270,
   minHeight: 320,
-  bgcolor: "#9AAFDF",
+  bgcolor: '#9AAFDF',
   borderRadius: 5,
 };
