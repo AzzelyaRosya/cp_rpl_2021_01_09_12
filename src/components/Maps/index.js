@@ -18,10 +18,6 @@ export default function Maps() {
     height: "330px",
   };
 
-  const maps = {
-    position: "relative",
-  };
-
   return (
     <>
       {/* <div className={maps}> */}
