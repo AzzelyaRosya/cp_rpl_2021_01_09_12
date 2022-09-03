@@ -1,20 +1,5 @@
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import * as React from "react";
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Card,
-  CardContent,
-  Grid,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-  TextField,
-  Divider,
-} from "@mui/material";
 import CarouselBanner from "../../components/Carousel/index";
 import Maps from "../../components/Maps";
 // Import Styles
@@ -36,10 +21,10 @@ import Maps from "../../components/Maps";
 //   subMenuTranslate,
 // } from "./styles";
 
-import { solutionData } from "./data";
-import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
+import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import vectorBanner from "../../assets/img/vectorbanner.png";
+import { solutionData, textField } from "./data";
 export default function index() {
   return (
     <>
@@ -354,10 +339,20 @@ export default function index() {
             </Grid>
           </Grid>
         </Grid>
+
+        <Box
+          sx={{
+            width: 1000,
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "auto",
+          }}
+        >
+          <Maps />
+        </Box>
       </Box>
       {/* </Container> */}
 
-      <Maps />
       <Typography
         sx={{
           fontWeight: "700",
@@ -384,158 +379,81 @@ export default function index() {
       </Typography>
       <Box
         maxWidth="xl"
-        mb={3}
         justifyContent="center"
         sx={{
-          width: "60%",
+          width: 700,
+          height: 420,
           backgroundColor: "#36476B",
           // height: { xs: "330px", sm: "340px", lg: "600x" },
-          height: "600px",
           borderRadius: 3,
           justifyContent: "center",
           alignItems: "center",
           margin: "auto",
+          mb: 7,
         }}
       >
-        <Grid container spacing={1} align="center">
-          <Grid xs={12} item mb={2.5}>
-            {/* Textfield Name */}
-            <Typography sx={{ textAlign: "left", fontSize: 16, color: "#fff" }}>
-              Name
+        {textField.map((field) => (
+          <Box sx={{ pl: 3.5, pr: 3.5, pt: 2 }} key={field.id}>
+            <Typography
+              sx={{ textAlign: "left", fontSize: 16, color: "#fff", mb: 1 }}
+            >
+              {field.title}
             </Typography>
             <TextField
-              className="text-field"
-              placeholder="Enter your name..."
-              inputProps={{
-                style: {
-                  fontSize: 15,
-                  height: 15,
-                  borderColor: "#fff",
-                },
-              }}
-              fullWidth
+              key={field.id}
+              placeholder={field.desc}
               sx={{
-                width: 600,
+                width: "100%",
                 backgroundColor: "#fff",
                 borderRadius: 2,
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
                   border: "1.5px solid",
-                  borderColor: "fff",
+                  borderColor: "#fff",
+                  borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "fff",
+                    borderColor: "#fff",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "fff",
+                    borderColor: "#fff",
                   },
-              }}
-            />
-          </Grid>
-          <Grid xs={12} item mb={2.5}>
-            {/* Textfield Email */}
-            <TextField
-              label="Email"
-              className="text-field"
-              placeholder="Enter your email..."
-              type="email"
-              inputProps={{
-                style: {
-                  fontSize: 15,
-                  height: 20,
+                "& .MuiInputBase-root": {
+                  paddingTop: "9px",
                 },
               }}
-              fullWidth
-              sx={{
-                "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "#1f2235",
-                  color: "#1f2235",
-                },
-                "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#1f2235",
-                  },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#1f2235",
-                  },
-
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#1f2235",
-                  fontWeight: "bold",
-                },
-
-                width: {
-                  xl: 600,
-                  lg: 600,
-                  md: 380,
-                  sm: 370,
-                  xs: 280,
-                },
-              }}
-            />
-          </Grid>
-
-          <Grid item xs={12} mb={2}>
-            {/* Textfield Message */}
-            <TextField
-              label="Message"
-              className="text-field"
               multiline
-              rows={4}
-              placeholder="Type your message here..."
               inputProps={{
                 style: {
-                  fontSize: 15,
-                  height: 100,
-                },
-              }}
-              fullWidth
-              sx={{
-                "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "#1f2235",
-                  color: "#1f2235",
-                },
-                "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#1f2235",
-                  },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#1f2235",
-                  },
-
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "#1f2235",
-                  fontWeight: "bold",
-                },
-
-                width: {
-                  xl: 600,
-                  lg: 600,
-                  md: 380,
-                  sm: 370,
-                  xs: 280,
+                  fontSize: 14,
+                  height: `${field.heights}`,
                 },
               }}
             />
-          </Grid>
-
+          </Box>
+        ))}
+        <Grid container align={"center"}>
           <Grid item xs={12}>
-            {/* Button */}
             <Button
-              type="submit"
-              variant="contained"
-              className="btn"
-              style={{
-                maxWidth: "90px",
-                maxHeight: "40px",
-                minWidth: "90px",
-                minHeight: "40px",
+              sx={{
+                color: "#fff",
+                backgroundColor: "#6D8CD0",
+                "&:hover": {
+                  backgroundColor: "#6D8CD0",
+                },
+                width: 150,
+                height: 40,
+                fontSize: 16,
+                textTransform: "uppercase",
+                textDecoration: "none",
+                justifyContent: "center",
+                alignItems: "center",
+                mt: 3,
               }}
+              onClick
             >
-              Submit!
+              Submit
             </Button>
           </Grid>
         </Grid>

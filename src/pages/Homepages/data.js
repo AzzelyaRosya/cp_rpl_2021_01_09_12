@@ -23,4 +23,25 @@ const solutionData = [
   },
 ];
 
-export { solutionData };
+const textField = [
+  {
+    id: 1,
+    title: "Name",
+    desc: "Write Your Name",
+    heights: "20px",
+  },
+  {
+    id: 2,
+    title: "Email",
+    desc: "Write Your Email",
+    heights: "20px",
+  },
+  {
+    id: 3,
+    title: "Message",
+    desc: "Write Your Message",
+    heights: "70px",
+  },
+];
+
+export { solutionData, textField };
