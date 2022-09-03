@@ -13,9 +13,10 @@ import { solutionData, textField } from "./data";
 // Import Styles
 import {
   visionBox,
-  imgBanner,
+  Img,
   gridVision,
   titleVision,
+  BootstrapButton,
   descVision,
   textTitle,
   gridCard,
@@ -35,6 +36,7 @@ import {
   titleTextfield,
   textFields,
   submitButton,
+  titleCard,
 } from "./styles";
 
 export default function index() {
@@ -42,55 +44,7 @@ export default function index() {
     <>
       {/* Carousel */}
       <CarouselBanner />
-      {/* <Box
-        sx={{
-          backgroundColor: "#DAE3F8",
-          height: "330px",
-          display: "flex",
-          borderBottomRightRadius: 20,
-          borderBottomLeftRadius: 20,
-        }}
-      >
-        <Box sx={{ mt: 4, ml: 4 }}>
-          <Typography
-            sx={{
-              fontWeight: "700",
-              fontSize: 55,
-              color: "#36476B",
-              textTransform: "uppercase",
-            }}
-            mb={-2}
-          >
-            WHAT
-          </Typography>
-          <Typography
-            sx={{
-              fontWeight: "700",
-              fontSize: 55,
-              color: "#36476B",
-              textTransform: "uppercase",
-            }}
-          >
-            WE DO?
-          </Typography>
-          <Typography
-            sx={{
-              ml: 1,
-              width: 450,
-              fontSize: 16,
-              color: "#36476B",
-              lineHeight: 1.5,
-            }}
-          >
-            LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM
-            DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
-            AMETLOREM IPSUM DOLOR SIT AMET
-          </Typography>
-        </Box>
-        <Box mt={4} sx={{ right: 0 }}>
-          <img src={vectorBanner} style={{ width: 460, height: 280 }} />
-        </Box>
-      </Box> */}
+
       {/* Vision Mission of Company*/}
       <Box sx={visionBox}>
         <Grid
@@ -101,21 +55,33 @@ export default function index() {
           // pl: { xs: 1, sm: 1 }, pr: { xs: 1, sm: 1 }
         >
           <Grid item xs={12} lg={5}>
-            <img
+            <Img
               src={vectorBanner}
-              sx={imgBanner}
-              style={{ maxWidth: "100%" }}
+              sx={{
+                width: "100%",
+              }}
             />
           </Grid>
           <Grid item xs={12} lg={6} sx={gridVision}>
-            <Typography sx={titleVision}>
-              VISION <br /> AND PURPOSE
+            <Typography
+              sx={{ ...titleVision, mt: { xs: -4, sm: -5, md: 2, lg: 2 } }}
+            >
+              WHAT
             </Typography>
+            <Typography sx={{ ...titleVision, mt: -0.5 }}>WE DO?</Typography>
             <Typography sx={descVision}>
               LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM
               DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
               AMETLOREM IPSUM DOLOR SIT AMET
             </Typography>
+            <BootstrapButton
+              onClick
+              variant="contained"
+              disableRipple
+              sx={{ mt: 2 }}
+            >
+              About Me!
+            </BootstrapButton>
           </Grid>
         </Grid>
       </Box>
@@ -126,26 +92,15 @@ export default function index() {
       <Grid
         container
         direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
-        // rowSpacing={7}
-        // columnSpacing={1}
         xs={12}
-        spacing={8}
+        spacing={5}
         sx={gridCard}
       >
         {solutionData.map((data) => (
-          <Grid
-            item
-            key={data.id}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
+          <Grid item key={data.id} sx={{ justifyContent: "center" }}>
             <Box
               sx={{
-                maxWidth: 230,
-                height: 300,
-                borderRadius: 3,
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
+                ...boxCard,
                 backgroundColor: `${data.id % 2 === 0 ? "#9AAFDF" : "#36476B"}`,
               }}
               elevation={3}
@@ -154,21 +109,16 @@ export default function index() {
               <div key={data.id}>
                 <data.icon
                   sx={{
-                    mt: 2,
+                    ...iconCard,
                     color: `${data.id % 2 === 0 ? "#36476B" : " #DAE3F8"}`,
-                    width: 130,
-                    height: 130,
                   }}
                 />
               </div>
               {/* Title */}
               <Typography
                 sx={{
-                  mt: -1,
-                  mb: -0.5,
-                  fontSize: 25,
+                  ...titleCard,
                   color: `${data.id % 2 === 0 ? "#36476B" : " #DAE3F8"}`,
-                  fontWeight: 600,
                 }}
               >
                 {data.title}
@@ -186,7 +136,12 @@ export default function index() {
             <Typography sx={textTitle}>OUR OFFICE</Typography>
           </Grid>
         </Grid>
-        <Grid container xs={12} sx={gridCompanyDetail} spacing={20}>
+        <Grid
+          container
+          xs={12}
+          sx={gridCompanyDetail}
+          spacing={{ sm: 2, md: 10, lg: 25 }}
+        >
           <Grid item>
             <Grid item>
               <Typography sx={nameCompany}>
@@ -195,13 +150,19 @@ export default function index() {
             </Grid>
             <Grid item>
               <Typography sx={address}>
-                Jl. Bintara VIII No.2, RT.005/RW.003, Bintara, Kec. Bekasi
-                Barat, Kota Bekasi, Jawa Barat 17134
+                Jl. Bintara VIII No.2, RT.005/RW.003, Bintara, <br />
+                Kec. Bekasi Barat, Kota Bekasi, Jawa Barat 17134
               </Typography>
             </Grid>
           </Grid>
           <Grid item>
-            <Grid item sx={{ display: "flex", mb: 1 }}>
+            <Grid
+              item
+              sx={{
+                display: "flex",
+                mb: 1,
+              }}
+            >
               <EmailRoundedIcon sx={iconContact} />
               <Typography sx={textContact}>sikobagiduo@gmail.com</Typography>
             </Grid>
@@ -216,34 +177,35 @@ export default function index() {
           <Maps />
         </Box>
       </Box>
-      {/* </Container> */}
 
       <Typography sx={textTitle}>CONTACT US!</Typography>
-      <Box maxWidth="xl" sx={boxContact}>
-        {textField.map((field) => (
-          <Box sx={{ pl: 3.5, pr: 3.5, pt: 2 }} key={field.id}>
-            <Typography sx={titleTextfield}>{field.title}</Typography>
-            <TextField
-              key={field.id}
-              placeholder={field.desc}
-              sx={textFields}
-              multiline
-              inputProps={{
-                style: {
-                  fontSize: 14,
-                  height: `${field.heights}`,
-                },
-              }}
-            />
-          </Box>
-        ))}
-        <Grid container align={"center"}>
-          <Grid item xs={12}>
-            <Button sx={submitButton} onClick>
-              Submit
-            </Button>
+      <Box>
+        <Box sx={boxContact}>
+          {textField.map((field) => (
+            <Box sx={{ pl: 3.5, pr: 3.5, pt: 2 }} key={field.id}>
+              <Typography sx={titleTextfield}>{field.title}</Typography>
+              <TextField
+                key={field.id}
+                placeholder={field.desc}
+                sx={textFields}
+                multiline
+                inputProps={{
+                  style: {
+                    fontSize: 14,
+                    height: `${field.heights}`,
+                  },
+                }}
+              />
+            </Box>
+          ))}
+          <Grid container align={"center"}>
+            <Grid item xs={12} pl={3} pr={3}>
+              <Button sx={submitButton} onClick>
+                Submit
+              </Button>
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
       </Box>
     </>
   );

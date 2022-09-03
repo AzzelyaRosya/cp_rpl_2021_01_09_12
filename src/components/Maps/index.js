@@ -14,8 +14,8 @@ export default function Maps() {
   });
   // Map Size
   const mapStyles = {
-    width: "100%",
-    height: "330px",
+    maxWidth: "100%",
+    height: "300px",
   };
 
   return (

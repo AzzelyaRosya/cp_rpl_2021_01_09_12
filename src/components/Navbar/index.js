@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   AppBar,
   Box,
@@ -10,28 +9,25 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import * as React from "react";
 // Import Styles
 import {
   appBar,
   boxCompany,
   boxMenuDesktop,
   boxMenuMobile,
-  buttonTranslate,
   companyNameDesktop,
   companyNameMobile,
   desktopBox,
   logoDesktop,
   logoMobile,
   menuMobile,
-  menuTranslate,
   subMenuDesktop,
   subMenuMobile,
-  subMenuTranslate,
 } from "./styles";
 // Data
-import { pages, translate, companyName } from "./data";
+import { companyName, pages } from "./data";
 // icons
-import GTranslateIcon from "@mui/icons-material/GTranslate";
 import MenuIcon from "@mui/icons-material/Menu";
 import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
 // Import React router
@@ -135,37 +131,6 @@ const Navbar = () => {
                 {companyName}
               </Typography>
             </Box>
-          </Box>
-
-          {/* Menu Translate */}
-          <Box>
-            {/* Icon */}
-            <IconButton onClick={handleOpenLanguageMenu} sx={buttonTranslate}>
-              <GTranslateIcon />
-            </IconButton>
-            <Menu
-              sx={menuTranslate}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseLanguageMenu}
-            >
-              {/* Sub Menu */}
-              {translate.map((language) => (
-                <MenuItem key={language} onClick={handleCloseLanguageMenu}>
-                  <Typography sx={subMenuTranslate}>{language}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

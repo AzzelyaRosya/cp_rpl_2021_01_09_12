@@ -2,24 +2,22 @@
 const pages = [
   {
     id: 1,
-    nav: "Beranda",
+    nav: "Home",
     path: "/",
   },
   {
     id: 2,
-    nav: "Tentang",
+    nav: "About",
     path: "/about",
   },
   {
     id: 3,
-    nav: "Produk",
+    nav: "Product",
     path: "/product",
   },
 ];
 
-// Data SubMenu Translate
-const translate = ["Bahasa (INA)", "Inggris (ENG)"];
 // Company Name
 const companyName = ["Company Name"];
 
-export { pages, translate, companyName };
+export { pages, companyName };
