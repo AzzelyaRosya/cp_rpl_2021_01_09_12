@@ -125,7 +125,7 @@ export const gridCompanyDetail = {
 export const nameCompany = {
   fontWeight: "700",
   fontSize: {
-    xs: 21.7,
+    xs: 20,
     sm: 20,
     md: 20,
     lg: 20,
@@ -137,6 +137,7 @@ export const address = {
   fontSize: 16,
   width: "100%",
   color: Colors.darkBlue,
+  mb: 1,
 };
 export const textContact = {
   fontSize: 16,

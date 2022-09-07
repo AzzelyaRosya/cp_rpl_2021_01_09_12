@@ -38,6 +38,8 @@ import {
   titleVision,
   visionBox,
 } from "./styles";
+// Import React router
+import { Link } from "react-router-dom";
 
 export default function index() {
   return (
@@ -74,14 +76,16 @@ export default function index() {
               DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
               AMETLOREM IPSUM DOLOR SIT AMET
             </Typography>
-            <BootstrapButton
-              onClick
-              variant="contained"
-              disableRipple
-              sx={{ mt: 2 }}
-            >
-              About Me!
-            </BootstrapButton>
+            <Link to="/about" style={{ textDecoration: "none" }}>
+              <BootstrapButton
+                onClick
+                variant="contained"
+                disableRipple
+                sx={{ mt: 2 }}
+              >
+                About Me!
+              </BootstrapButton>
+            </Link>
           </Grid>
         </Grid>
       </Box>

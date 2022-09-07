@@ -62,7 +62,7 @@ export const subMenuDesktop = {
 
 // Mobile Ver
 export const boxMenuMobile = {
-  flexGrow: 1,
+  flexGrow: 0.7,
   display: { xs: "flex", sm: "flex", md: "none", lg: "none" },
 };
 export const menuMobile = { display: { xs: "block", md: "none" } };
