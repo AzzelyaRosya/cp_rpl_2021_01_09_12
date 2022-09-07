@@ -30,6 +30,27 @@ export const typoCardStyle = {
   textAlign: 'center',
 };
 
+export const textTitle = {
+  fontWeight: '700',
+  fontSize: {
+    xs: 21.7,
+    sm: 30,
+    md: 35,
+    lg: 35,
+  },
+  color: Colors.darkBlue,
+  textAlign: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
+  textTransform: 'uppercase',
+  mt: {
+    xs: 3,
+    sm: 4.5,
+    md: 3,
+  },
+  mb: 3,
+};
+
 export const flexCard = {
   display: 'flex',
   justifyContent: 'right',
