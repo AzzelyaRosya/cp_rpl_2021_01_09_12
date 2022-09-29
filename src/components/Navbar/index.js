@@ -65,14 +65,14 @@ const Navbar = () => {
               </Link>
             </Box>
             <Box>
-              <Link to="cp_rpl_2021_01_09_12/about" style={{ textDecoration: 'none' }}>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
                 <Button onClick sx={subMenuDesktop}>
                   About
                 </Button>
               </Link>
             </Box>
             <Box>
-              <Link to="cp_rpl_2021_01_09_12/product" style={{ textDecoration: 'none' }}>
+              <Link to="/product" style={{ textDecoration: 'none' }}>
                 <Button onClick sx={subMenuDesktop}>
                   Product
                 </Button>
@@ -120,14 +120,14 @@ const Navbar = () => {
                   </MenuItem>
                 </Box>
               </Link>
-              <Link to="cp_rpl_2021_01_09_12/about" style={{ textDecoration: 'none' }}>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
                 <Box>
                   <MenuItem onClick>
                     <Typography sx={subMenuMobile}>About</Typography>
                   </MenuItem>
                 </Box>
               </Link>
-              <Link to="cp_rpl_2021_01_09_12/product" style={{ textDecoration: 'none' }}>
+              <Link to="/product" style={{ textDecoration: 'none' }}>
                 <Box>
                   <MenuItem onClick>
                     <Typography sx={subMenuMobile}>Product</Typography>
