@@ -3,7 +3,7 @@ const pages = [
   {
     id: 1,
     nav: 'Home',
-    path: '/company-profile/',
+    path: '/cp_rpl_2021_01_09_12/',
   },
   {
     id: 2,
