@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/cp_rpl_2021_01_09_12/static/js/main.99cb8424.js",
+    "main.js": "/cp_rpl_2021_01_09_12/static/js/main.5f81b85f.js",
     "static/media/carouselbanner1.png": "/cp_rpl_2021_01_09_12/static/media/carouselbanner1.d95766d3810e7d242709.png",
     "static/media/timeline2.jpg": "/cp_rpl_2021_01_09_12/static/media/timeline2.e5ca11f0488c17e6b9f4.jpg",
     "static/media/contohvideo.mp4": "/cp_rpl_2021_01_09_12/static/media/contohvideo.3cecd2527aba58941e7e.mp4",
@@ -21,9 +21,9 @@
     "static/media/pd2.jpg": "/cp_rpl_2021_01_09_12/static/media/pd2.5750283bc75fa01fe2a7.jpg",
     "static/media/pd1.jpg": "/cp_rpl_2021_01_09_12/static/media/pd1.51407b10e6f14441fcc0.jpg",
     "index.html": "/cp_rpl_2021_01_09_12/index.html",
-    "main.99cb8424.js.map": "/cp_rpl_2021_01_09_12/static/js/main.99cb8424.js.map"
+    "main.5f81b85f.js.map": "/cp_rpl_2021_01_09_12/static/js/main.5f81b85f.js.map"
   },
   "entrypoints": [
-    "static/js/main.99cb8424.js"
+    "static/js/main.5f81b85f.js"
   ]
 }
