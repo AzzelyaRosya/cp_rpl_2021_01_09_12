@@ -1,37 +1,14 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import * as React from "react";
+import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import * as React from 'react';
 // Import Styles
-import {
-  appBar,
-  boxCompany,
-  boxMenuDesktop,
-  boxMenuMobile,
-  companyNameDesktop,
-  companyNameMobile,
-  desktopBox,
-  logoDesktop,
-  logoMobile,
-  menuMobile,
-  subMenuDesktop,
-  subMenuMobile,
-} from "./styles";
+import { appBar, boxCompany, boxMenuDesktop, boxMenuMobile, companyNameDesktop, companyNameMobile, desktopBox, logoDesktop, logoMobile, menuMobile, subMenuDesktop, subMenuMobile } from './styles';
 // Data
-import { companyName, pages } from "./data";
+import { companyName, pages } from './data';
 // icons
-import MenuIcon from "@mui/icons-material/Menu";
-import WifiTetheringIcon from "@mui/icons-material/WifiTethering";
+import MenuIcon from '@mui/icons-material/Menu';
+import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
 // Import React router
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState();
@@ -71,28 +48,43 @@ const Navbar = () => {
           {/* Menu */}
           <Box sx={boxMenuDesktop}>
             {/* Sub Menu */}
-            {pages.map((data) => (
+            {/* {pages.map((data) => (
               <Box key={data.id}>
-                <Link to={`${data.path}`} style={{ textDecoration: "none" }}>
+                <Link to={`${data.path}`} style={{ textDecoration: 'none' }}>
                   <Button onClick sx={subMenuDesktop}>
                     {data.nav}
                   </Button>
                 </Link>
               </Box>
-            ))}
+            ))} */}
+            <Box>
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
+                <Button onClick sx={subMenuDesktop}>
+                  Home
+                </Button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
+                <Button onClick sx={subMenuDesktop}>
+                  About
+                </Button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to="/product" style={{ textDecoration: 'none' }}>
+                <Button onClick sx={subMenuDesktop}>
+                  Product
+                </Button>
+              </Link>
+            </Box>
           </Box>
 
           {/* Mobile Ver */}
           <Box sx={boxMenuMobile}>
             {/* Menu Icon */}
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-            >
-              <MenuIcon sx={{ color: "#fff" }} />
+            <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu}>
+              <MenuIcon sx={{ color: '#fff' }} />
             </IconButton>
             {/* Menu */}
             <Menu
@@ -100,27 +92,48 @@ const Navbar = () => {
               sx={menuMobile}
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
               {/* Menu Items/Sub Menu */}
-              {pages.map((data) => (
-                <Link to={`${data.path}`} style={{ textDecoration: "none" }}>
+              {/* {pages.map((data) => (
+                <Link to={`${data.path}`} style={{ textDecoration: 'none' }}>
                   <Box key={data.id}>
                     <MenuItem onClick>
                       <Typography sx={subMenuMobile}>{data.nav}</Typography>
                     </MenuItem>
                   </Box>
                 </Link>
-              ))}
+              ))} */}
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
+                <Box>
+                  <MenuItem onClick>
+                    <Typography sx={subMenuMobile}>Home</Typography>
+                  </MenuItem>
+                </Box>
+              </Link>
+              <Link to="/about" style={{ textDecoration: 'none' }}>
+                <Box>
+                  <MenuItem onClick>
+                    <Typography sx={subMenuMobile}>About</Typography>
+                  </MenuItem>
+                </Box>
+              </Link>
+              <Link to="/product" style={{ textDecoration: 'none' }}>
+                <Box>
+                  <MenuItem onClick>
+                    <Typography sx={subMenuMobile}>Product</Typography>
+                  </MenuItem>
+                </Box>
+              </Link>
             </Menu>
             {/* Company Identity */}
             <Box flexGrow={1} sx={boxCompany}>
