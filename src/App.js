@@ -20,9 +20,9 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route exact path="/cp_rpl_2021_01_09_12/" component={HomePages} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/product" component={Products} />
+          <Route path="/cp_rpl_2021_01_09_12/" exact component={HomePages} />
+          <Route path="/about" component={About} />
+          <Route path="/product" component={Products} />
         </Switch>
 
         <Footer />
