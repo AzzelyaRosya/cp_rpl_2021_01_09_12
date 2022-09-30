@@ -1,15 +1,14 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
-import * as React from "react";
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import * as React from 'react';
 // Import Icon & Images
-import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import vectorBanner from "../../assets/img/vectorbanner.png";
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import vectorBanner from '../../assets/img/vectorbanner.png';
 // Import component
-import CarouselBanner from "../../components/Carousel/index";
-import Maps from "../../components/Maps";
+import CarouselBanner from '../../components/Carousel/index';
+import Maps from '../../components/Maps';
 // Import data
-import { solutionData, textField } from "./data";
-
+import { solutionData, textField } from './data';
 // Import Styles
 import {
   address,
@@ -20,6 +19,8 @@ import {
   boxMaps,
   descCard,
   descVision,
+  titleVision,
+  visionBox,
   gridCard,
   gridCompanyDetail,
   gridDetail,
@@ -35,11 +36,9 @@ import {
   textTitle,
   titleCard,
   titleTextfield,
-  titleVision,
-  visionBox,
-} from "./styles";
+} from './styles';
 // Import React router
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function index() {
   return (
@@ -60,29 +59,16 @@ export default function index() {
             <Img
               src={vectorBanner}
               sx={{
-                width: "100%",
+                width: '100%',
               }}
             />
           </Grid>
           <Grid item xs={12} lg={6} sx={gridVision}>
-            <Typography
-              sx={{ ...titleVision, mt: { xs: -4, sm: -5, md: 2, lg: 2 } }}
-            >
-              WHAT
-            </Typography>
+            <Typography sx={{ ...titleVision, mt: { xs: -4, sm: -5, md: 2, lg: 2 } }}>WHAT</Typography>
             <Typography sx={{ ...titleVision, mt: -0.5 }}>WE DO?</Typography>
-            <Typography sx={descVision}>
-              LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMETLOREM IPSUM
-              DOLOR SIT AMET LOREM IPSUM DOLOR SIT AMET LOREM IPSUM DOLOR SIT
-              AMETLOREM IPSUM DOLOR SIT AMET
-            </Typography>
-            <Link to="/about" style={{ textDecoration: "none" }}>
-              <BootstrapButton
-                onClick
-                variant="contained"
-                disableRipple
-                sx={{ mt: 2 }}
-              >
+            <Typography sx={descVision}>Lorem ipsum dira sopspanare tad irar neledes. Lorem ipsum dolor sit amet jennie bp kim jisooeu tad neledes. </Typography>
+            <Link to="/about" style={{ textDecoration: 'none' }}>
+              <BootstrapButton onClick variant="contained" disableRipple sx={{ mt: 2 }}>
                 About Me!
               </BootstrapButton>
             </Link>
@@ -93,19 +79,13 @@ export default function index() {
       {/* Title 1: Solution */}
       <Typography sx={textTitle}>BEST SOLUTION FOR YOU!</Typography>
 
-      <Grid
-        container
-        direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
-        xs={12}
-        spacing={5}
-        sx={gridCard}
-      >
+      <Grid container direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row' }} xs={12} spacing={'auto'} sx={gridCard}>
         {solutionData.map((data) => (
-          <Grid item key={data.id} sx={{ justifyContent: "center" }}>
+          <Grid item key={data.id} sx={{ justifyContent: 'center', mb: { lg: 0, sm: 4, xs: 4 }, mr: { lg: 5, sm: 0, xs: 0 } }}>
             <Box
               sx={{
                 ...boxCard,
-                backgroundColor: `${data.id % 2 === 0 ? "#9AAFDF" : "#36476B"}`,
+                backgroundColor: `${data.id % 2 === 0 ? '#9AAFDF' : '#36476B'}`,
               }}
               elevation={3}
             >
@@ -114,7 +94,7 @@ export default function index() {
                 <data.icon
                   sx={{
                     ...iconCard,
-                    color: `${data.id % 2 === 0 ? "#36476B" : " #DAE3F8"}`,
+                    color: `${data.id % 2 === 0 ? '#36476B' : ' #DAE3F8'}`,
                   }}
                 />
               </div>
@@ -122,7 +102,7 @@ export default function index() {
               <Typography
                 sx={{
                   ...titleCard,
-                  color: `${data.id % 2 === 0 ? "#36476B" : " #DAE3F8"}`,
+                  color: `${data.id % 2 === 0 ? '#36476B' : ' #DAE3F8'}`,
                 }}
               >
                 {data.title}
@@ -140,17 +120,10 @@ export default function index() {
             <Typography sx={textTitle}>OUR OFFICE</Typography>
           </Grid>
         </Grid>
-        <Grid
-          container
-          xs={12}
-          sx={gridCompanyDetail}
-          spacing={{ sm: 2, md: 10, lg: 25 }}
-        >
+        <Grid container xs={12} sx={gridCompanyDetail} spacing={{ sm: 2, md: 10, lg: 25 }}>
           <Grid item>
             <Grid item>
-              <Typography sx={nameCompany}>
-                PT BRILYAN TRIMATRA UTAMA
-              </Typography>
+              <Typography sx={nameCompany}>PT BRILYAN TRIMATRA UTAMA</Typography>
             </Grid>
             <Grid item>
               <Typography sx={address}>
@@ -163,14 +136,14 @@ export default function index() {
             <Grid
               item
               sx={{
-                display: "flex",
+                display: 'flex',
                 mb: 1,
               }}
             >
               <EmailRoundedIcon sx={iconContact} />
               <Typography sx={textContact}>sikobagiduo@gmail.com</Typography>
             </Grid>
-            <Grid item sx={{ display: "flex" }}>
+            <Grid item sx={{ display: 'flex' }}>
               <LocalPhoneRoundedIcon sx={iconContact} />
               <Typography sx={textContact}>(021) 23081805</Typography>
             </Grid>
@@ -202,7 +175,7 @@ export default function index() {
               />
             </Box>
           ))}
-          <Grid container align={"center"}>
+          <Grid container align={'center'}>
             <Grid item xs={12} pl={3} pr={3}>
               <Button sx={submitButton} onClick>
                 Submit

@@ -33,7 +33,7 @@ export const typoCardStyle = {
 export const textTitle = {
   fontWeight: '700',
   fontSize: {
-    xs: 21.7,
+    xs: 26,
     sm: 30,
     md: 35,
     lg: 35,
@@ -76,4 +76,31 @@ export const radiusVideo = {
   borderTopRightRadius: 5,
   borderTopLeftRadius: 5,
   overflow: 'hidden',
+};
+
+export const backButton = {
+  color: '#fff',
+  backgroundColor: '#6D8CD0',
+  '&:hover': {
+    backgroundColor: '#6D8CD0',
+  },
+  width: 90,
+  height: 40,
+  fontSize: 14,
+  textTransform: 'uppercase',
+  textDecoration: 'none',
+  justifyContent: 'center',
+  alignItems: 'center',
+  mt: 5,
+};
+
+export const imgDetail = {
+  width: '100%',
+  maxHeight: 250,
+  borderBottomLeftRadius: 10,
+  borderBottomRightRadius: 10,
+  borderTopRightRadius: 10,
+  borderTopLeftRadius: 10,
+  overflow: 'hidden',
+  objectFit: 'cover',
 };

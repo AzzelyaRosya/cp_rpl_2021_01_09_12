@@ -14,8 +14,7 @@ import apaaja from '../../assets/video/contohvideo.mp4';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 // style
-import Colors from '../../theme/Color';
-import { borderRadiusImages, buttonHover, cardStyle, flexCard, flexGrid, radiusVideo, typoCardStyle, textTitle } from './styles';
+import { borderRadiusImages, buttonHover, backButton, cardStyle, flexCard, flexGrid, radiusVideo, typoCardStyle, textTitle, imgDetail } from './styles';
 
 export default function Products() {
   const [open1, setOpen1] = React.useState(false);
@@ -50,7 +49,19 @@ export default function Products() {
 
   return (
     <>
-      <img src={bannerproduct} style={{ width: '100%', height: 400, objectFit: 'cover' }} />
+      <Box
+        sx={{
+          height: {
+            xs: 230,
+            sm: 300,
+            lg: 450,
+          },
+          mt: { xs: 7, sm: 8, md: 8, lg: 8 },
+          width: '100%',
+        }}
+      >
+        <img src={bannerproduct} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </Box>
 
       <Box
         sx={{ align: 'center' }}
@@ -97,11 +108,15 @@ export default function Products() {
               <Dialog fullScreen={fullScreen} open={open1} onClose={handleClose1}>
                 <DialogTitle sx={typoCardStyle}>TITLE PRODUCTS 1 </DialogTitle>
                 <DialogContent>
-                  <DialogContentText>
+                  <img src={pd1} style={imgDetail} />
+                  <DialogContentText mt={1.5}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                     laborum.
                   </DialogContentText>
+                  <Button sx={backButton} onClick={handleClose1}>
+                    Back
+                  </Button>
                 </DialogContent>
               </Dialog>
             </CardActions>
@@ -127,11 +142,15 @@ export default function Products() {
               <Dialog fullScreen={fullScreen} open={open2} onClose={handleClose2}>
                 <DialogTitle sx={typoCardStyle}>TITLE PRODUCTS 2 </DialogTitle>
                 <DialogContent>
-                  <DialogContentText>
+                  <img src={pd2} style={imgDetail} />
+                  <DialogContentText mt={1.5}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                     laborum.
                   </DialogContentText>
+                  <Button sx={backButton} onClick={handleClose2}>
+                    Back
+                  </Button>
                 </DialogContent>
               </Dialog>
             </CardActions>
@@ -157,11 +176,15 @@ export default function Products() {
               <Dialog fullScreen={fullScreen} open={open3} onClose={handleClose3}>
                 <DialogTitle sx={typoCardStyle}>TITLE PRODUCTS 3 </DialogTitle>
                 <DialogContent>
-                  <DialogContentText>
+                  <img src={pd3} style={imgDetail} />
+                  <DialogContentText mt={1.5}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                     laborum.
                   </DialogContentText>
+                  <Button sx={backButton} onClick={handleClose3}>
+                    Back
+                  </Button>
                 </DialogContent>
               </Dialog>
             </CardActions>

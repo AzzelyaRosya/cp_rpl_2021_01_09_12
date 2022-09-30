@@ -3,7 +3,7 @@ import * as React from 'react';
 // Import Styles
 import { appBar, boxCompany, boxMenuDesktop, boxMenuMobile, companyNameDesktop, companyNameMobile, desktopBox, logoDesktop, logoMobile, menuMobile, subMenuDesktop, subMenuMobile } from './styles';
 // Data
-import { companyName, pages } from './data';
+import { companyName } from './data';
 // icons
 import MenuIcon from '@mui/icons-material/Menu';
 import WifiTetheringIcon from '@mui/icons-material/WifiTethering';
@@ -40,23 +40,16 @@ const Navbar = () => {
               {/* Logo */}
               <WifiTetheringIcon sx={logoDesktop} />
               {/* Company Name */}
-              <Typography variant="h6" noWrap sx={companyNameDesktop}>
-                {companyName}
-              </Typography>
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
+                <Typography variant="h6" noWrap sx={companyNameDesktop}>
+                  {companyName}
+                </Typography>
+              </Link>
             </Box>
           </Box>
           {/* Menu */}
           <Box sx={boxMenuDesktop}>
             {/* Sub Menu */}
-            {/* {pages.map((data) => (
-              <Box key={data.id}>
-                <Link to={`${data.path}`} style={{ textDecoration: 'none' }}>
-                  <Button onClick sx={subMenuDesktop}>
-                    {data.nav}
-                  </Button>
-                </Link>
-              </Box>
-            ))} */}
             <Box>
               <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
                 <Button onClick sx={subMenuDesktop}>
@@ -103,16 +96,6 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              {/* Menu Items/Sub Menu */}
-              {/* {pages.map((data) => (
-                <Link to={`${data.path}`} style={{ textDecoration: 'none' }}>
-                  <Box key={data.id}>
-                    <MenuItem onClick>
-                      <Typography sx={subMenuMobile}>{data.nav}</Typography>
-                    </MenuItem>
-                  </Box>
-                </Link>
-              ))} */}
               <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
                 <Box>
                   <MenuItem onClick>
