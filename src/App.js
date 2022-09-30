@@ -4,7 +4,7 @@ import HomePages from './pages/Homepages/index';
 import About from './pages/About/index';
 import Products from './pages/Products/index';
 import Footer from './components/Footer/index';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 function App() {
   return (
