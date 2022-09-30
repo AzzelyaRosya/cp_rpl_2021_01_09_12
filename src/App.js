@@ -17,8 +17,8 @@ function App() {
             <Redirect exact to="/cp_rpl_2021_01_09_12/" />
             <Route path="/cp_rpl_2021_01_09_12/" component={HomePages} />
           </Route>
-          <Route path="/about" component={About} />
-          <Route path="/product" component={Products} />
+          <Route path="/about/" component={About} />
+          <Route path="/product/" component={Products} />
         </Switch>
 
         <Footer />
