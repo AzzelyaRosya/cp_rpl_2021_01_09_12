@@ -13,9 +13,8 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path="/">
-            <Redirect exact to="/cp_rpl_2021_01_09_12/" />
-            <Route exact path="/cp_rpl_2021_01_09_12/" component={HomePages} />
+          <Route path="/cp_rpl_2021_01_09_12/">
+            <Redirect exact to="/cp_rpl_2021_01_09_12/" component={HomePages} />
           </Route>
           <Route exact path="/about" component={About} />
           <Route exact path="/product" component={Products} />
