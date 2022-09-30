@@ -40,7 +40,7 @@ const Navbar = () => {
               {/* Logo */}
               <WifiTetheringIcon sx={logoDesktop} />
               {/* Company Name */}
-              <Link to="/home" style={{ textDecoration: 'none' }}>
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
                 <Typography variant="h6" noWrap sx={companyNameDesktop}>
                   {companyName}
                 </Typography>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <Box sx={boxMenuDesktop}>
             {/* Sub Menu */}
             <Box>
-              <Link to="/home" style={{ textDecoration: 'none' }}>
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
                 <Button onClick sx={subMenuDesktop}>
                   Home
                 </Button>
@@ -96,7 +96,7 @@ const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              <Link to="/home" style={{ textDecoration: 'none' }}>
+              <Link to="/cp_rpl_2021_01_09_12/" style={{ textDecoration: 'none' }}>
                 <Box>
                   <MenuItem onClick>
                     <Typography sx={subMenuMobile}>Home</Typography>
