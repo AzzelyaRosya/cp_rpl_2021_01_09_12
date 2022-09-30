@@ -4,7 +4,7 @@ import HomePages from './pages/Homepages/index';
 import About from './pages/About/index';
 import Products from './pages/Products/index';
 import Footer from './components/Footer/index';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path="/">
+          <Route path="/cp_rpl_2021_01_09_12/">
             <Redirect exact to="/cp_rpl_2021_01_09_12/" />
             <Route path="/cp_rpl_2021_01_09_12/" component={HomePages} />
           </Route>
