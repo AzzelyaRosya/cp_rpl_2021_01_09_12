@@ -13,7 +13,7 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path="/cp_rpl_2021_01_09_12/">
+          <Route path="/">
             <Redirect exact to="/cp_rpl_2021_01_09_12/" />
             <Route path="/cp_rpl_2021_01_09_12/" component={HomePages} />
           </Route>
